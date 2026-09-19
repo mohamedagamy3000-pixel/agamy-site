@@ -257,7 +257,7 @@ html[dir="rtl"] .scroll-hint i::after{ animation-direction:reverse; }
 
 /* ---------- 6) الشغل ---------- */
 .work-grid{ display:grid; gap:clamp(2rem,4vw,3.5rem); grid-template-columns:repeat(2,1fr); }
-.work-grid > *:nth-child(3n+1){ grid-column:1 / -1; }
+.work-grid > .is-wide{ grid-column:1 / -1; }
 
 .work-card{ display:block; }
 .work-thumb{
@@ -265,7 +265,7 @@ html[dir="rtl"] .scroll-hint i::after{ animation-direction:reverse; }
   background:var(--bg-2); border:1px solid var(--line);
   aspect-ratio:4/5;
 }
-.work-grid > *:nth-child(3n+1) .work-thumb{ aspect-ratio:21/9; }
+.work-grid > .is-wide .work-thumb{ aspect-ratio:21/9; }
 .work-thumb img{
   width:100%; height:100%; object-fit:cover;
   filter:grayscale(.5) contrast(1.05);
@@ -414,7 +414,7 @@ html[dir="rtl"] .back-link svg{ transform:scaleX(-1); }
 /* ---------- 12) موبايل ---------- */
 @media (max-width:860px){
   .work-grid{ grid-template-columns:1fr; }
-  .work-grid > *:nth-child(3n+1) .work-thumb{ aspect-ratio:4/5; }
+  .work-grid > .is-wide .work-thumb{ aspect-ratio:4/5; }
   .about-grid{ grid-template-columns:1fr; }
   .about-grid .portrait{ position:relative; inset-block-start:auto; max-width:340px; }
 }
@@ -713,3 +713,17 @@ html[data-lang="en"] .proof-stats dd{ font-family:var(--font-en); font-weight:40
 /* الفيديو شغال؟ الصورة تسيب مكانها — طبقة واحدة بتدرّج واحد بدل اتنين */
 .hero.has-video .hero-bg{ opacity:0; }
 .hero-video.is-on{ opacity:.52; }
+
+/* ---------- 24) مشاريع صورها الأصلية صغيرة ----------
+   بتتعرض أضيق وأطول عشان العرض المعروض يفضل قريب من دقّة الصورة،
+   فتبان حادّة بدل ما تتمدّ وتتضبّب. */
+.work-card.is-lowres .work-thumb{ aspect-ratio:2/3; }
+.work-card.is-lowres .work-thumb img{ image-rendering:auto; }
+@media (min-width:861px){
+  .work-card.is-lowres{ max-width:460px; }
+}
+
+/* معرض مشروع صوره صغيرة: أعمدة أكتر عشان كل صورة تتعرض أضيق وتفضل حادّة */
+.gallery.is-lowres{ columns:5; }
+@media (max-width:1100px){ .gallery.is-lowres{ columns:3; } }
+@media (max-width:640px){  .gallery.is-lowres{ columns:2; } }

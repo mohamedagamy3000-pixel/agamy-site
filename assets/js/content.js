@@ -268,6 +268,7 @@ const SITE = {
       id: "miss-laverne",
       published: true,
       stage: "produced",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
       title:  { ar: "Miss Laverne", en: "Miss Laverne" },
       format: { ar: "حملة عطور", en: "Perfume campaign" },
       genre:  { ar: "إعلان", en: "Commercial" },
@@ -295,6 +296,7 @@ const SITE = {
       id: "atlantis",
       published: true,
       stage: "produced",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
       title:  { ar: "Atlantis Homme", en: "Atlantis Homme" },
       format: { ar: "حملة عطور", en: "Fragrance campaign" },
       genre:  { ar: "إعلان", en: "Commercial" },
@@ -321,6 +323,7 @@ const SITE = {
       id: "bella",
       published: true,
       stage: "produced",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
       title:  { ar: "Bella by Laverne", en: "Bella by Laverne" },
       format: { ar: "فيلم حملة", en: "Campaign film" },
       genre:  { ar: "إعلان", en: "Commercial" },
@@ -348,6 +351,7 @@ const SITE = {
       id: "garden",
       published: true,
       stage: "produced",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
       title:  { ar: "Miss Laverne Garden", en: "Miss Laverne Garden" },
       format: { ar: "فيلم حملة", en: "Campaign film" },
       genre:  { ar: "إعلان", en: "Commercial" },

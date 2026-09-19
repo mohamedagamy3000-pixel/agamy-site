@@ -179,8 +179,11 @@
     if (section) section.hidden = false;
     grid.innerHTML = works.map(function (w, i) {
       var n = String(i + 1).padStart(2, "0");
+      // المشاريع اللي صورها الأصلية صغيرة بتاخد كلاس خاص عشان
+      // ما تتعرضش بحجم أكبر من دقّتها فتبان مضبّبة
+      var cls = "work-card reveal" + (w.lowRes ? " is-lowres" : "");
       return '' +
-        '<a class="work-card reveal" href="work.html?id=' + encodeURIComponent(w.id) + '">' +
+        '<a class="' + cls + '" href="work.html?id=' + encodeURIComponent(w.id) + '">' +
           '<div class="work-thumb" data-fb-ar="' + esc(TXT.missingImage.ar) + '" data-fb-en="' + esc(TXT.missingImage.en) + '">' +
             '<span class="work-index">' + n + '</span>' +
             '<img data-guard src="' + esc(w.poster || "") + '" alt="' + esc(t(w.title)) + '" loading="lazy">' +
@@ -197,6 +200,15 @@
           "</div>" +
         "</a>";
     }).join("");
+    // الكارت العريض كل ٣ كروت — بس المشاريع عالية الدقة بس
+    // (صورة صغيرة متتمدّش على عرض الصفحة)
+    var cards = grid.querySelectorAll(".work-card");
+    for (var k = 0; k < cards.length; k += 3) {
+      var pick = k;
+      while (pick < cards.length && cards[pick].classList.contains("is-lowres")) pick++;
+      if (pick < cards.length && pick < k + 3) cards[pick].classList.add("is-wide");
+    }
+
     guardImages(grid);
     initReveal(grid);
     refreshFallbacks(grid);
@@ -246,7 +258,8 @@
       ? '<section class="section"><div class="wrap">' +
           '<div class="kicker">' + bi(TXT.moreImg) + "</div>" +
         "</div>" +
-        '<div class="gallery">' + frames + "</div>" +
+        // أعمدة أكتر للمشاريع الصغيرة = عرض أقل لكل صورة = حِدّة أعلى
+        '<div class="gallery' + (w.lowRes ? " is-lowres" : "") + '">' + frames + "</div>" +
         "</section>"
       : "";
 
@@ -522,6 +535,11 @@
   function paintLightbox() {
     var g = lbItems[lbIndex];
     var img = lb.querySelector("img");
+    // الصورة ما تتعرضش أكبر من دقّتها الحقيقية — تفضل حادّة بدل ما تتمدّ
+    img.style.maxWidth = "";
+    img.onload = function () {
+      if (img.naturalWidth) img.style.maxWidth = img.naturalWidth + "px";
+    };
     var cap = lb.querySelector("figcaption");
     img.src = g.src;
     img.alt = g.caption ? t(g.caption) : "";
