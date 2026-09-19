@@ -568,27 +568,6 @@ html[dir="rtl"] .lb-next{ transform:scaleX(-1); }
   .lb-next{ justify-self:end; grid-column:1; grid-row:2; }
 }
 
-/* ---------- 17) قايمة تحت التطوير ---------- */
-.dev-list{ border-top:1px solid var(--line); }
-.dev-item .dev-row{
-  display:grid; align-items:baseline; gap:.35rem 1.5rem;
-  grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) auto;
-  padding-block:1.4rem;
-  border-bottom:1px solid var(--line);
-  transition:padding-inline-start .35s var(--ease), background .35s var(--ease);
-}
-.dev-item .dev-row:hover{ padding-inline-start:1rem; background:linear-gradient(to inline-end, var(--bg-2), transparent 60%); }
-.dev-title{ font-size:clamp(1.05rem,.95rem + .5vw,1.3rem); font-weight:600; color:var(--fg); transition:color .3s var(--ease); }
-.dev-item .dev-row:hover .dev-title{ color:var(--accent); }
-.dev-meta{ font-size:.85rem; color:var(--muted); display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; }
-.dev-meta i{ width:3px; height:3px; border-radius:50%; background:var(--line); flex:none; }
-.dev-status{ font-size:.78rem; letter-spacing:.06em; color:var(--accent-dim); white-space:nowrap; }
-
-@media (max-width:760px){
-  .dev-item .dev-row{ grid-template-columns:1fr; }
-  .dev-status{ white-space:normal; }
-}
-
 /* ---------- 18) سجل المهرجانات ---------- */
 .creds{
   margin-top:2.75rem; padding:1.6rem 1.75rem;
@@ -613,15 +592,6 @@ html[dir="rtl"] .lb-next{ transform:scaleX(-1); }
 .creds-list li.is-win{ color:var(--fg); font-weight:500; }
 .creds-list li.is-win::before{ background:var(--accent); box-shadow:0 0 0 3px rgba(224,164,88,.14); }
 .reel[hidden]{ display:none; }
-
-/* ---------- 19) دعوة التعاون تحت مشاريع التطوير ---------- */
-.dev-cta{
-  margin-top:2.5rem;
-  display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between;
-  gap:1.5rem;
-}
-.dev-cta p{ max-width:58ch; color:var(--fg-2); font-size:.98rem; margin:0; }
-.dev-cta strong{ color:var(--fg); font-weight:600; }
 
 /* ---------- 20) معرض المشروع في صفحة العمل ---------- */
 .work-thumb[data-wframe]{ cursor:zoom-in; }

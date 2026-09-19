@@ -160,10 +160,6 @@
     return publishedWorks().filter(function (w) { return w.stage !== "development"; });
   }
 
-  function developmentWorks() {
-    return publishedWorks().filter(function (w) { return w.stage === "development"; });
-  }
-
   function renderGrid() {
     var grid = document.querySelector("[data-work-grid]");
     if (!grid) return;
@@ -582,25 +578,6 @@
     });
   }
 
-  /* ---------- قايمة تحت التطوير ---------- */
-  function renderDevList() {
-    var host = document.querySelector("[data-dev-list]");
-    if (!host) return;
-    var works = developmentWorks();
-    var section = document.getElementById("development");
-    if (!works.length) { if (section) section.hidden = true; return; }
-
-    host.innerHTML = works.map(function (w) {
-      return '<li class="dev-item">' +
-        '<div class="dev-row">' +
-          '<span class="dev-title">' + bi(w.title) + "</span>" +
-          '<span class="dev-meta">' + bi(w.format) + '<i></i>' + bi(w.genre) + "</span>" +
-          '<span class="dev-status">' + bi(w.status) + "</span>" +
-        "</div></li>";
-    }).join("");
-    initReveal(host);
-  }
-
   // بيحدّث نصوص الأماكن الفاضية حسب اللغة الحالية
   function refreshFallbacks(scope) {
     var lang = root.getAttribute("data-lang") === "en" ? "en" : "ar";
@@ -626,7 +603,6 @@
     renderGallery();
     initLightbox();
     renderGrid();
-    renderDevList();
     renderWorkPage();
     initReel();
     guardImages(document);
