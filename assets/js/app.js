@@ -199,6 +199,7 @@
     guardImages(grid);
     initReveal(grid);
     refreshFallbacks(grid);
+    initCardPreview(grid, works);
   }
 
   /* ---------- 7) صفحة العمل المفردة ---------- */
@@ -340,6 +341,114 @@
       document.querySelector(".hero").classList.add("has-bg");
     };
     probe.src = src;
+  }
+
+  /* ---------- فيديو خلفية أول الصفحة ---------- */
+  function initHeroVideo() {
+    var host = document.querySelector("[data-hero-video]");
+    if (!host || typeof SITE === "undefined") return;
+    var v = SITE.hero && SITE.hero.video;
+    if (!v || !v.id) return;
+
+    // وضع تقليل الحركة: الصورة وخلاص
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    var src = v.provider === "youtube"
+      ? "https://www.youtube-nocookie.com/embed/" + encodeURIComponent(v.id) +
+        "?autoplay=1&mute=1&loop=1&controls=0&playsinline=1&modestbranding=1&playlist=" + encodeURIComponent(v.id)
+      : "https://player.vimeo.com/video/" + encodeURIComponent(v.id) +
+        "?background=1&autoplay=1&loop=1&muted=1&autopause=0";
+
+    var f = document.createElement("iframe");
+    f.setAttribute("src", src);
+    f.setAttribute("allow", "autoplay; fullscreen");
+    f.setAttribute("tabindex", "-1");
+    f.setAttribute("aria-hidden", "true");
+    f.setAttribute("title", "");
+    f.addEventListener("load", function () {
+      // الصورة بتفضل تحته fallback، والفيديو بيظهر بالراحة فوقها
+      setTimeout(function () {
+        host.classList.add("is-on");
+        var hero = host.closest(".hero");
+        if (hero) hero.classList.add("has-video");   // الصورة تسيب مكانها للفيديو
+      }, 500);
+    });
+
+    // على الموبايل الصورة تكفي — الفيديو بياكل من باقة النت.
+    // بنستنى الشاشة تتقاس فعلًا: لو التبويب مخفي عرضها بيبقى صفر،
+    // فبنسمع للتغيير بدل ما نلغي الفيديو خالص.
+    var wide = window.matchMedia("(min-width: 861px)");
+    function mount() {
+      if (!wide.matches || host.firstChild) return;
+      host.appendChild(f);
+    }
+    mount();
+    if (wide.addEventListener) wide.addEventListener("change", mount);
+    else if (wide.addListener) wide.addListener(mount);
+    window.addEventListener("resize", mount, { passive: true });
+  }
+
+  /* ---------- شريط البراندات ---------- */
+  function initClients() {
+    var host = document.querySelector("[data-clients]");
+    if (!host || typeof SITE === "undefined") return;
+    var list = SITE.clients || [];
+    var sec = host.closest(".clients");
+    if (!list.length) { if (sec) sec.hidden = true; return; }
+
+    // القايمة بتتكرر مرتين عشان اللف يفضل مستمر من غير فجوة
+    function row(hidden) {
+      return '<div class="marquee-row"' + (hidden ? ' aria-hidden="true"' : '') + '>' +
+        list.map(function (c) { return '<span class="client">' + esc(c) + "</span>"; }).join("") +
+        "</div>";
+    }
+    host.innerHTML = row(false) + row(true);
+  }
+
+  /* ---------- معاينة متحركة على كارت المشروع ---------- */
+  function initCardPreview(grid, works) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!window.matchMedia("(hover: hover)").matches) return;   // اللمس مالوش hover
+
+    grid.querySelectorAll(".work-card").forEach(function (card, i) {
+      var w = works[i];
+      if (!w) return;
+      var shots = [w.poster].concat(w.stills || []).filter(Boolean);
+      if (shots.length < 2) return;
+
+      var thumb = card.querySelector(".work-thumb");
+      if (!thumb) return;
+
+      // طبقة فوق الصورة الأصلية عشان التبديل يبقى ناعم
+      var layer = document.createElement("img");
+      layer.className = "preview-layer";
+      layer.alt = "";
+      layer.setAttribute("aria-hidden", "true");
+      thumb.appendChild(layer);
+
+      var timer = null, idx = 0, warmed = false;
+
+      function warm() {                    // تحميل مسبق مرة واحدة بس
+        if (warmed) return;
+        warmed = true;
+        shots.slice(1).forEach(function (src) { var p = new Image(); p.src = src; });
+      }
+      function step() {
+        idx = (idx + 1) % shots.length;
+        layer.src = shots[idx];
+        layer.classList.toggle("is-on", idx !== 0);
+      }
+      function start() { warm(); if (!timer) timer = setInterval(step, 700); }
+      function stop() {
+        clearInterval(timer); timer = null; idx = 0;
+        layer.classList.remove("is-on");
+      }
+
+      card.addEventListener("mouseenter", start);
+      card.addEventListener("mouseleave", stop);
+      card.addEventListener("focus", start);
+      card.addEventListener("blur", stop);
+    });
   }
 
   /* ---------- معرض اللقطات ---------- */
@@ -498,6 +607,8 @@
     initLang();
     initHeader();
     initHeroBg();
+    initHeroVideo();
+    initClients();
     renderGallery();
     initLightbox();
     renderGrid();
