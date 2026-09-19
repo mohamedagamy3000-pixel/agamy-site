@@ -651,43 +651,50 @@ html[dir="rtl"] .hero-video iframe{ transform:translate(50%,-50%); }
 /* لما الفيديو يشتغل، الصورة تهدى شوية تحته */
 .hero-video.is-on ~ .wrap{ position:relative; z-index:1; }
 
-/* ---------- 22) شريط البراندات ---------- */
-.clients{
+/* ---------- 22) شريط الإثبات: أرقام + براندات ---------- */
+.proof{
   border-block:1px solid var(--line);
-  padding-block:1.4rem;
-  display:flex; align-items:center; gap:clamp(1rem,3vw,2.5rem);
-  overflow:hidden;
+  padding-block:clamp(2.25rem,5vw,3.25rem);
 }
-.clients[hidden]{ display:none; }
-.clients-label{
-  flex:none; padding-inline-start:var(--pad);
+.proof-stats{
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:clamp(1.25rem,3vw,2.5rem); margin:0;
+}
+.proof-stats > div{ min-width:0; }
+.proof-stats dd{
+  margin:0 0 .3rem;
+  font-size:clamp(2rem,1.2rem + 2.6vw,3.4rem);
+  font-weight:600; line-height:1; color:var(--fg);
+  letter-spacing:-.02em; font-variant-numeric:tabular-nums;
+}
+html[data-lang="en"] .proof-stats dd{ font-family:var(--font-en); font-weight:400; }
+.proof-stats dt{
+  font-size:.78rem; line-height:1.4; color:var(--muted);
+  letter-spacing:.02em;
+}
+
+.proof-clients{
+  margin:clamp(1.75rem,4vw,2.5rem) 0 0;
+  padding-top:clamp(1.25rem,3vw,1.75rem);
+  border-top:1px solid var(--line);
+  display:flex; flex-wrap:wrap; align-items:center;
+  gap:.55rem .85rem;
+  font-size:.92rem; color:var(--fg-2);
+}
+.proof-clients[hidden]{ display:none; }
+.proof-label{
   font-size:.7rem; letter-spacing:.16em; text-transform:uppercase;
-  color:var(--muted); white-space:nowrap;
+  color:var(--muted); margin-inline-end:.4rem;
 }
-.marquee{
-  flex:1 1 auto; min-width:0;
-  display:flex; overflow:hidden;
-  -webkit-mask-image:linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
-          mask-image:linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+.proof-clients .client{ color:var(--fg-2); white-space:nowrap; }
+.proof-clients i{
+  width:3px; height:3px; border-radius:50%;
+  background:var(--line); flex:none;
 }
-.marquee-row{
-  display:flex; align-items:center; flex:none; gap:clamp(1.75rem,4vw,3.5rem);
-  padding-inline-end:clamp(1.75rem,4vw,3.5rem);
-  animation:marquee 34s linear infinite;
+
+@media (max-width:760px){
+  .proof-stats{ grid-template-columns:repeat(2,1fr); gap:1.75rem 1.25rem; }
 }
-html[dir="rtl"] .marquee-row{ animation-direction:reverse; }
-.clients:hover .marquee-row{ animation-play-state:paused; }
-@keyframes marquee{ from{ transform:translateX(0) } to{ transform:translateX(-100%) } }
-@media (prefers-reduced-motion:reduce){
-  .marquee-row{ animation:none; }
-  .marquee-row[aria-hidden="true"]{ display:none; }
-}
-.client{
-  font-size:clamp(.95rem,.85rem + .45vw,1.3rem);
-  font-weight:500; color:var(--fg-2); white-space:nowrap;
-  transition:color .3s var(--ease);
-}
-.clients:hover .client{ color:var(--fg); }
 
 /* ---------- 23) معاينة الكارت ---------- */
 .preview-layer{

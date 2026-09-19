@@ -44,6 +44,7 @@
     clientL: { ar: "العميل", en: "Client" },
     watch:   { ar: "شوف الفيلم", en: "Watch the film" },
     moreImg: { ar: "صور من المشروع", en: "From the project" },
+    workedWith: { ar: "اشتغلت مع", en: "Worked with" },
     yearL: { ar: "السنة", en: "Year" }
   };
 
@@ -388,21 +389,16 @@
     window.addEventListener("resize", mount, { passive: true });
   }
 
-  /* ---------- شريط البراندات ---------- */
+  /* ---------- سطر البراندات تحت الأرقام ---------- */
   function initClients() {
     var host = document.querySelector("[data-clients]");
     if (!host || typeof SITE === "undefined") return;
     var list = SITE.clients || [];
-    var sec = host.closest(".clients");
-    if (!list.length) { if (sec) sec.hidden = true; return; }
-
-    // القايمة بتتكرر مرتين عشان اللف يفضل مستمر من غير فجوة
-    function row(hidden) {
-      return '<div class="marquee-row"' + (hidden ? ' aria-hidden="true"' : '') + '>' +
-        list.map(function (c) { return '<span class="client">' + esc(c) + "</span>"; }).join("") +
-        "</div>";
-    }
-    host.innerHTML = row(false) + row(true);
+    if (!list.length) { host.hidden = true; return; }
+    host.innerHTML =
+      '<span class="proof-label">' + bi(TXT.workedWith) + "</span>" +
+      list.map(function (c) { return '<span class="client">' + esc(c) + "</span>"; })
+          .join('<i aria-hidden="true"></i>');
   }
 
   /* ---------- معاينة متحركة على كارت المشروع ---------- */
