@@ -63,8 +63,42 @@ const SITE = {
   /* ---------- الأعمال ----------
      كل عمل هنا شغل متصوّر ومتسلّم، وليه صفحة بصوره كلها.
      lowRes: true → المشروع صوره الأصلية صغيرة، فبيتعرض بحجم أصغر
-     عشان يفضل حادّ. شيلها لو بدّلت الصور بنسخ أكبر.        */
+     عشان يفضل حادّ. شيلها لو بدّلت الصور بنسخ أكبر.
+     statusLabel → تسمية خانة status في صفحة المشروع (الافتراضي «العميل»). */
   works: [
+    {
+      id: "hes-dead-now",
+      published: true,
+      stage: "produced",
+      title:  { ar: "هو مات دلوقتي", en: "He's Dead Now" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2022",
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
+      status: { ar: "١١ مهرجان دولي · ٨ دول", en: "11 international festivals · 8 countries" },
+      // تسمية الخانة دي في صفحة المشروع. لو مكتبتهاش بتبقى «العميل».
+      statusLabel: { ar: "العرض", en: "Screenings" },
+      logline:{
+        ar: "فيلم قصير بالأبيض والأسود — عرضه العالمي الأول في مهرجان الفيلم العربي في روتردام.",
+        en: "A black-and-white short film — world premiere at the Arab Film Festival in Rotterdam."
+      },
+      poster: "assets/img/stills/hdn-01.jpg",
+      stills: [
+        "assets/img/stills/hdn-02.jpg",
+        "assets/img/stills/hdn-03.jpg",
+        "assets/img/stills/hdn-04.jpg",
+        "assets/img/stills/hdn-05.jpg",
+        "assets/img/stills/hdn-06.jpg",
+        "assets/img/stills/hdn-07.jpg",
+        "assets/img/stills/hdn-08.jpg"
+      ],
+      video:  null,
+      notes:  {
+        ar: "فاز بجايزة لجنة التحكيم لأحسن فيلم روائي قصير — مهرجان سانتا كروز السينمائي الدولي، الأرجنتين. واتعرض في Film at Lincoln Center ضمن مهرجان نيويورك للفيلم الأفريقي.",
+        en: "Winner, Best Fiction Short Film (Jury Award) — Santa Cruz International Film Festival, Argentina. Screened at Film at Lincoln Center as part of the New York African Film Festival."
+      }
+    },
+
     {
       id: "moussa",
       published: true,

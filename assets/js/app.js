@@ -293,7 +293,7 @@
           "<div><dt>" + bi(TXT.role) + "</dt><dd>" + bi(w.role) + "</dd></div>" +
           "<div><dt>" + bi(TXT.format) + "</dt><dd>" + bi(w.format) + "</dd></div>" +
           "<div><dt>" + bi(TXT.genre) + "</dt><dd>" + bi(w.genre) + "</dd></div>" +
-          "<div><dt>" + bi(TXT.clientL) + "</dt><dd>" + bi(w.status) + "</dd></div>" +
+          "<div><dt>" + bi(w.statusLabel || TXT.clientL) + "</dt><dd>" + bi(w.status) + "</dd></div>" +
           "<div><dt>" + bi(TXT.yearL) + "</dt><dd>" + esc(w.year || "") + "</dd></div>" +
         "</dl>" +
         (w.notes ? '<div class="notes" style="margin-top:2.5rem"><p>' + bi(w.notes) + "</p></div>" : "") +
