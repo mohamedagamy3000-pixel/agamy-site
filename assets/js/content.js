@@ -82,6 +82,27 @@ const SITE = {
         ar: "فيلم قصير بالأبيض والأسود — عرضه العالمي الأول في مهرجان الفيلم العربي في روتردام.",
         en: "A black-and-white short film — world premiere at the Arab Film Festival in Rotterdam."
       },
+      // المهرجانات والجوايز — بتظهر كقايمة في صفحة المشروع.
+      // win: true بيخلّي السطر مميّز بنقطة دهبي.
+      awards: [
+        { win: true,
+          ar: "جايزة لجنة التحكيم — أحسن فيلم روائي قصير · مهرجان سانتا كروز السينمائي الدولي، الأرجنتين",
+          en: "Winner, Best Fiction Short Film (Jury Award) · Santa Cruz International Film Festival, Argentina" },
+        { ar: "العرض العالمي الأول · مهرجان الفيلم العربي، روتردام — هولندا",
+          en: "World premiere · Arab Film Festival, Rotterdam — Netherlands" },
+        { ar: "عُرض في Film at Lincoln Center · مهرجان نيويورك للفيلم الأفريقي (الدورة ٣٠)",
+          en: "Screened at Film at Lincoln Center · New York African Film Festival (30th edition)" },
+        { ar: "المسابقة الرسمية · مهرجان AfryKamera للفيلم الأفريقي، وارسو — بولندا",
+          en: "Official competition · AfryKamera African Film Festival, Warsaw — Poland" },
+        { ar: "المسابقة الرسمية للأفلام القصيرة · مهرجان ماتيرا السينمائي الدولي — إيطاليا",
+          en: "Official short film competition · Matera International Film Festival — Italy" },
+        { ar: "العرض الأول في أمريكا الشمالية · مهرجان أوريجون للأفلام القصيرة، بورتلاند — أمريكا",
+          en: "North American premiere · Oregon Short Film Festival, Portland — USA" },
+        { ar: "المسابقة الرسمية · مهرجان تكساس للأفلام القصيرة، سان أنطونيو — أمريكا",
+          en: "Official competition · Texas Short Film Festival, San Antonio — USA" },
+        { ar: "المسابقة الرسمية · مهرجان أوكوتوكس السينمائي — كندا",
+          en: "Official competition · Okotoks Film Festival — Canada" }
+      ],
       poster: "assets/img/stills/hdn-01.jpg",
       stills: [
         "assets/img/stills/hdn-02.jpg",
@@ -94,8 +115,34 @@ const SITE = {
       ],
       video:  null,
       notes:  {
-        ar: "فاز بجايزة لجنة التحكيم لأحسن فيلم روائي قصير — مهرجان سانتا كروز السينمائي الدولي، الأرجنتين. واتعرض في Film at Lincoln Center ضمن مهرجان نيويورك للفيلم الأفريقي.",
-        en: "Winner, Best Fiction Short Film (Jury Award) — Santa Cruz International Film Festival, Argentina. Screened at Film at Lincoln Center as part of the New York African Film Festival."
+        ar: "إنتاج Alex Films · كتابة وإخراج طارق الشربيني · إنتاج مني محمود.",
+        en: "Alex Films · Written and directed by Tarek El Sherbeny · Produced by Mony Mahmoud."
+      }
+    },
+
+    {
+      id: "madonna",
+      published: true,
+      stage: "produced",
+      title:  { ar: "مادونا", en: "Madonna" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2025",
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
+      status: { ar: "المركز البريطاني ومعهد جوته بالإسكندرية", en: "British Council & Goethe-Institut, Alexandria" },
+      statusLabel: { ar: "بدعم من", en: "Supported by" },
+      logline:{
+        ar: "فيلم قصير بطولة عبد العزيز مخيون وكريم قاسم — إخراج جون فريد.",
+        en: "A short film starring Abdelaziz Makhyoun and Karim Kassem — directed by John Fareed."
+      },
+      // ⚠️ محتاج صورة: حط فريم من الفيلم في assets/img/work/madonna.jpg
+      //    وغيّر السطر اللي تحت. دلوقتي بيظهر مربع فاضي مكانها.
+      poster: "",
+      stills: [],
+      video:  { provider: "vimeo", id: "1112657903" },
+      notes:  {
+        ar: "إخراج جون فريد · إنتاج كريم قاسم وأدولف العسال · تصوير فيلو · مونتاج سارة عبدالله.",
+        en: "Directed by John Fareed · Produced by Karim Kassem and Adolf Elassal · Cinematography by Filo · Edited by Sara Abdallah."
       }
     },
 

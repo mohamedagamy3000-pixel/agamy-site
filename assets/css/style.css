@@ -697,3 +697,12 @@ html[data-lang="en"] .proof-stats dd{ font-family:var(--font-en); font-weight:40
 .gallery.is-lowres{ columns:5; }
 @media (max-width:1100px){ .gallery.is-lowres{ columns:3; } }
 @media (max-width:640px){  .gallery.is-lowres{ columns:2; } }
+
+/* ---------- 25) مهرجانات وجوايز في صفحة المشروع ---------- */
+.awards{
+  margin-top:clamp(2.5rem,5vw,3.5rem);
+  padding-top:clamp(1.75rem,4vw,2.5rem);
+  border-top:1px solid var(--line);
+}
+.awards .kicker{ margin-bottom:1.25rem; }
+.awards .creds-list{ max-width:70ch; }

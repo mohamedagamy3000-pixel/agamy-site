@@ -44,6 +44,7 @@
     clientL: { ar: "العميل", en: "Client" },
     watch:   { ar: "شوف الفيلم", en: "Watch the film" },
     moreImg: { ar: "صور من المشروع", en: "From the project" },
+    awardsL: { ar: "مهرجانات وجوايز", en: "Festivals & awards" },
     workedWith: { ar: "اشتغلت مع", en: "Worked with" },
     yearL: { ar: "السنة", en: "Year" }
   };
@@ -259,6 +260,18 @@
         "</section>"
       : "";
 
+    // المهرجانات والجوايز
+    var awardsBlock = "";
+    if (w.awards && w.awards.length) {
+      awardsBlock = '<div class="awards">' +
+        '<div class="kicker">' + bi(TXT.awardsL) + "</div>" +
+        '<ul class="creds-list">' +
+          w.awards.map(function (a) {
+            return '<li' + (a.win ? ' class="is-win"' : "") + ">" + bi(a) + "</li>";
+          }).join("") +
+        "</ul></div>";
+    }
+
     var videoBlock = "";
     if (w.video && w.video.id) {
       videoBlock = '<section class="section"><div class="wrap">' +
@@ -297,6 +310,7 @@
           "<div><dt>" + bi(TXT.yearL) + "</dt><dd>" + esc(w.year || "") + "</dd></div>" +
         "</dl>" +
         (w.notes ? '<div class="notes" style="margin-top:2.5rem"><p>' + bi(w.notes) + "</p></div>" : "") +
+        awardsBlock +
       "</div></section>" +
 
       galleryBlock +
