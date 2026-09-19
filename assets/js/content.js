@@ -127,22 +127,30 @@ const SITE = {
       title:  { ar: "مادونا", en: "Madonna" },
       format: { ar: "فيلم قصير", en: "Short film" },
       genre:  { ar: "دراما", en: "Drama" },
-      year:   "2025",
+      year:   "2022",
       role:   { ar: "مدير إنتاج", en: "Production Manager" },
-      status: { ar: "المركز البريطاني ومعهد جوته بالإسكندرية", en: "British Council & Goethe-Institut, Alexandria" },
+      status: { ar: "المركز البريطاني ومعهد جوته بالإسكندرية", en: "British Council &amp; Goethe-Institut, Alexandria" },
       statusLabel: { ar: "بدعم من", en: "Supported by" },
       logline:{
-        ar: "فيلم قصير بطولة عبد العزيز مخيون وكريم قاسم — إخراج جون فريد.",
-        en: "A short film starring Abdelaziz Makhyoun and Karim Kassem — directed by John Fareed."
+        ar: "فيلم قصير بطولة عبد العزيز مخيون وكريم قاسم — إخراج جون فريد، تصوير فيلوباتير مراد.",
+        en: "A short film starring Abdelaziz Makhyoun and Karim Kassem — directed by John Fareed, shot by Filopater Morad."
       },
-      // ⚠️ محتاج صورة: حط فريم من الفيلم في assets/img/work/madonna.jpg
-      //    وغيّر السطر اللي تحت. دلوقتي بيظهر مربع فاضي مكانها.
-      poster: "",
-      stills: [],
+      poster: "assets/img/stills/madonna-01.jpg",
+      stills: [
+        "assets/img/stills/madonna-02.jpg",
+        "assets/img/stills/madonna-03.jpg",
+        "assets/img/stills/madonna-04.jpg",
+        "assets/img/stills/madonna-05.jpg",
+        "assets/img/stills/madonna-06.jpg",
+        "assets/img/stills/madonna-07.jpg",
+        "assets/img/stills/madonna-08.jpg",
+        "assets/img/stills/madonna-09.jpg",
+        "assets/img/stills/madonna-10.jpg"
+      ],
       video:  { provider: "vimeo", id: "1112657903" },
       notes:  {
-        ar: "إخراج جون فريد · إنتاج كريم قاسم وأدولف العسال · تصوير فيلو · مونتاج سارة عبدالله.",
-        en: "Directed by John Fareed · Produced by Karim Kassem and Adolf Elassal · Cinematography by Filo · Edited by Sara Abdallah."
+        ar: "مسكت الميزانية والفريق والمواقع والجدول ولوجيستيات السِت من التحضير للتصوير. آخر أربع صور من كواليس التصوير.",
+        en: "I ran the budget, crew, locations, schedule and set logistics from prep through the shoot. The last four images are from the set."
       }
     },
 
