@@ -147,6 +147,7 @@ const SITE = {
           en: "Nominee — Jury Award, Outstanding Narrative Short Film · Manassat Film Festival" }
       ],
       poster: "assets/img/stills/hdn-01.jpg",
+      posterRatio: 1.354,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/hdn-02.jpg",
         "assets/img/stills/hdn-03.jpg",
@@ -178,6 +179,7 @@ const SITE = {
         en: "Music video for \"Marijuana\" by the band Hageen — directed by me."
       },
       poster: "assets/img/stills/marijuana-04.jpg",
+      posterRatio: 2.389,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/marijuana-01.jpg",
         "assets/img/stills/marijuana-02.jpg",
@@ -212,6 +214,7 @@ const SITE = {
         en: "A short film — shot in Alexandria."
       },
       poster: "assets/img/stills/liveshow-02.jpg",
+      posterRatio: 1.44,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/liveshow-01.jpg",
         "assets/img/stills/liveshow-03.jpg",
@@ -238,6 +241,7 @@ const SITE = {
         en: "A short film starring Abdelaziz Makhyoun and Karim Kassem — directed by John Fareed, shot by Filopater Morad."
       },
       poster: "assets/img/stills/madonna-01.jpg",
+      posterRatio: 2.667,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/madonna-02.jpg",
         "assets/img/stills/madonna-03.jpg",
@@ -271,6 +275,7 @@ const SITE = {
         en: "An independent short film I produced, shot in the Egyptian countryside."
       },
       poster: "assets/img/stills/moussa-04.jpg",
+      posterRatio: 1.333,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/moussa-01.jpg",
         "assets/img/stills/moussa-02.jpg",
@@ -300,6 +305,7 @@ const SITE = {
         en: "A launch film across multiple built sets — from a lunar surface to a neon-lit street."
       },
       poster: "assets/img/stills/trubla-02.jpg",
+      posterRatio: 1.813,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/trubla-01.jpg",
         "assets/img/stills/trubla-03.jpg",
@@ -330,6 +336,7 @@ const SITE = {
         en: "A coastal drama, shot at night on the shore."
       },
       poster: "assets/img/stills/bared-04.jpg",
+      posterRatio: 1.78,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/bared-01.jpg",
         "assets/img/stills/bared-02.jpg",
@@ -361,6 +368,7 @@ const SITE = {
         en: "A fragrance campaign for a Saudi brand — shot in Egypt."
       },
       poster: "assets/img/stills/laverne-02.jpg",
+      posterRatio: 1.537,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/laverne-01.jpg",
         "assets/img/stills/laverne-03.jpg",
@@ -389,6 +397,7 @@ const SITE = {
         en: "A sports commercial across multiple interior locations."
       },
       poster: "assets/img/stills/gouna-01.jpg",
+      posterRatio: 1.78,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/gouna-02.jpg",
         "assets/img/stills/gouna-03.jpg"
@@ -415,6 +424,7 @@ const SITE = {
         en: "A Ramadan TVC — family and street scenes in Alexandria."
       },
       poster: "assets/img/stills/makka-03.jpg",
+      posterRatio: 1.769,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/makka-01.jpg",
         "assets/img/stills/makka-02.jpg",
@@ -444,6 +454,7 @@ const SITE = {
         en: "An eyewear photo campaign for a Saudi brand — shot in Egypt."
       },
       poster: "assets/img/stills/assaf-03.jpg",
+      posterRatio: 0.951,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/assaf-01.jpg",
         "assets/img/stills/assaf-02.jpg",
@@ -472,6 +483,7 @@ const SITE = {
         en: "A women's fragrance campaign for a Saudi brand — shot in Egypt."
       },
       poster: "assets/img/stills/misslaverne-04.jpg",
+      posterRatio: 0.567,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/misslaverne-01.jpg",
         "assets/img/stills/misslaverne-02.jpg",
@@ -500,6 +512,7 @@ const SITE = {
         en: "A men's fragrance campaign — shot on the coast in Egypt."
       },
       poster: "assets/img/stills/atlantis-01.jpg",
+      posterRatio: 0.557,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/atlantis-02.jpg",
         "assets/img/stills/atlantis-03.jpg"
@@ -527,6 +540,7 @@ const SITE = {
         en: "A fragrance campaign for a Saudi brand — shot in Egypt."
       },
       poster: "assets/img/stills/bella-03.jpg",
+      posterRatio: 0.559,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/bella-01.jpg",
         "assets/img/stills/bella-02.jpg",
@@ -555,6 +569,7 @@ const SITE = {
         en: "A garden fragrance campaign — a daylight shoot in Egypt."
       },
       poster: "assets/img/stills/garden-03.jpg",
+      posterRatio: 0.663,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/garden-01.jpg",
         "assets/img/stills/garden-02.jpg",
@@ -583,6 +598,7 @@ const SITE = {
         en: "A photo essay on the Latin Cemetery in Alexandria."
       },
       poster: "assets/img/stills/cemetery-01.jpg",
+      posterRatio: 1.779,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
         "assets/img/stills/cemetery-02.jpg",
         "assets/img/stills/cemetery-03.jpg",

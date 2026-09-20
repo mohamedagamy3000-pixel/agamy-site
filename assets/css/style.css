@@ -710,3 +710,13 @@ html[data-lang="en"] .proof-stats dd{ font-family:var(--font-en); font-weight:40
 .creds-more{ margin:1.1rem 0 0; font-size:.85rem; }
 .creds-more a{ color:var(--accent); border-bottom:1px solid transparent; transition:border-color .25s var(--ease); }
 .creds-more a:hover{ border-bottom-color:var(--accent); }
+
+/* ---------- 26) الكارت بياخد نسبة صورته ---------- */
+/* الصور السينمائية عرضية (١٦:٩ أو ٢.٣٩:١). لما التصميم كان بيفرض ٤:٥
+   كان بيقص لحد ٦٧٪ من عرض اللقطة. دلوقتي كل كارت بنسبة صورته الحقيقية،
+   والصورة بتتعرض كاملة من غير أي قص. */
+.work-grid{ align-items:start; }
+.work-card .work-thumb img{ object-fit:cover; object-position:center; }
+
+/* النسب المفروضة بتتلغي لما الكارت عنده نسبة صورته */
+.work-thumb[style*="aspect-ratio"]{ aspect-ratio:auto; }

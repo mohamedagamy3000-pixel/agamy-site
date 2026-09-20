@@ -181,7 +181,9 @@
       var cls = "work-card reveal" + (w.lowRes ? " is-lowres" : "");
       return '' +
         '<a class="' + cls + '" href="work.html?id=' + encodeURIComponent(w.id) + '">' +
-          '<div class="work-thumb" data-fb-ar="' + esc(TXT.missingImage.ar) + '" data-fb-en="' + esc(TXT.missingImage.en) + '">' +
+          '<div class="work-thumb"' +
+            (w.posterRatio ? ' style="aspect-ratio:' + w.posterRatio + '"' : "") +
+            ' data-fb-ar="' + esc(TXT.missingImage.ar) + '" data-fb-en="' + esc(TXT.missingImage.en) + '">' +
             '<span class="work-index">' + n + '</span>' +
             '<img data-guard src="' + esc(w.poster || "") + '" alt="' + esc(t(w.title)) + '" loading="lazy">' +
           '</div>' +
@@ -293,7 +295,8 @@
       "</div></section>" +
 
       '<section class="section"><div class="wrap">' +
-        '<div class="work-thumb" data-wframe="0" tabindex="0" role="button" style="aspect-ratio:21/9;cursor:zoom-in"' +
+        '<div class="work-thumb" data-wframe="0" tabindex="0" role="button"' +
+          ' style="aspect-ratio:' + (w.posterRatio || "21/9") + ';cursor:zoom-in"' +
           ' data-fb-ar="' + esc(TXT.missingImage.ar) + '" data-fb-en="' + esc(TXT.missingImage.en) + '">' +
           '<img data-guard src="' + esc(w.poster || "") + '" alt="' + esc(t(w.title)) + '"></div>' +
       "</div></section>" +
