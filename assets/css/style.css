@@ -721,16 +721,72 @@ html[data-lang="en"] .proof-stats dd{ font-family:var(--font-en); font-weight:40
 /* النسب المفروضة بتتلغي لما الكارت عنده نسبة صورته */
 .work-thumb[style*="aspect-ratio"]{ aspect-ratio:auto; }
 
-/* ---------- 27) مجموعات الأعمال ---------- */
-.work-group + .work-group{ margin-top:clamp(3.5rem,8vw,6rem); }
-.group-head{
-  display:flex; align-items:baseline; gap:.8rem;
-  margin:0 0 clamp(1.5rem,3vw,2.25rem);
-  padding-bottom:.9rem;
-  border-bottom:1px solid var(--line);
-  font-size:clamp(1.1rem,1rem + .6vw,1.5rem); font-weight:600;
+/* ---------- 27) فلتر الأعمال ---------- */
+.work-filters{
+  display:flex; flex-wrap:wrap; gap:.5rem;
+  margin-bottom:clamp(1.75rem,4vw,2.75rem);
 }
-.group-head em{
-  font-style:normal; font-size:.72rem; letter-spacing:.1em;
-  color:var(--accent); font-variant-numeric:tabular-nums;
+.filter{
+  display:inline-flex; align-items:center; gap:.5rem;
+  padding:.55rem 1.1rem; border:1px solid var(--line); border-radius:100px;
+  font-size:.88rem; color:var(--fg-2);
+  transition:border-color .25s var(--ease), color .25s var(--ease), background .25s var(--ease);
+}
+.filter em{
+  font-style:normal; font-size:.7rem; color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+.filter:hover{ border-color:var(--fg-2); color:var(--fg); }
+.filter[aria-pressed="true"]{ background:var(--fg); border-color:var(--fg); color:var(--bg); }
+.filter[aria-pressed="true"] em{ color:rgba(11,11,12,.55); }
+
+/* ---------- 28) شبكة موحّدة ١٦:٩ ---------- */
+.work-grid{
+  display:grid; grid-template-columns:repeat(2,1fr);
+  gap:clamp(1.25rem,2.5vw,2rem);
+  align-items:start;
+}
+.work-grid > .work-card[hidden]{ display:none; }
+.work-card .work-thumb{
+  aspect-ratio:16/9;           /* موحّدة — الصفوف بقت متساوية */
+  position:relative; overflow:hidden;
+  border-radius:var(--r); background:var(--bg-2); border:1px solid var(--line);
+}
+.work-card .work-thumb img{
+  width:100%; height:100%; object-fit:cover; object-position:center;
+  filter:grayscale(.35) contrast(1.04);
+  transition:transform .9s var(--ease), filter .6s var(--ease);
+}
+.work-card:hover .work-thumb img{ transform:scale(1.04); filter:none; }
+
+/* الدور بيظهر على الصورة بدل ما ياخد سطر تحتها */
+.work-role{
+  position:absolute; inset-block-end:.7rem; inset-inline-start:.7rem; z-index:2;
+  font-size:.68rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--fg); background:rgba(11,11,12,.66);
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+  padding:.3rem .65rem; border-radius:100px;
+  opacity:0; transform:translateY(4px);
+  transition:opacity .35s var(--ease), transform .35s var(--ease);
+}
+.work-card:hover .work-role,
+.work-card:focus-visible .work-role{ opacity:1; transform:none; }
+
+/* سطر واحد تحت الصورة: الاسم والسنة */
+.work-card .work-meta{
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:1rem; padding-top:.85rem;
+}
+.work-card .work-meta h3{
+  font-size:clamp(1rem,.92rem + .35vw,1.2rem); margin:0;
+  transition:color .3s var(--ease);
+}
+.work-card:hover .work-meta h3{ color:var(--accent); }
+.work-year{
+  font-size:.78rem; color:var(--muted); flex:none;
+  font-variant-numeric:tabular-nums;
+}
+
+@media (max-width:760px){
+  .work-grid{ grid-template-columns:1fr; }
 }

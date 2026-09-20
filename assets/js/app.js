@@ -45,6 +45,7 @@
     watch:   { ar: "شوف الفيلم", en: "Watch the film" },
     moreImg: { ar: "صور من المشروع", en: "From the project" },
     awardsL: { ar: "مهرجانات وجوايز", en: "Festivals & awards" },
+    catAll:   { ar: "الكل", en: "All" },
     catFilm:  { ar: "أفلام", en: "Films" },
     catComm:  { ar: "إعلانات وحملات", en: "Commercials & campaigns" },
     catMusic: { ar: "فيديو كليبات", en: "Music videos" },
@@ -177,66 +178,61 @@
     }
     if (section) section.hidden = false;
 
-    // الأعمال متقسّمة حسب النوع، وكل قسم من الأحدث للأقدم
-    var GROUPS = [
+    var FILTERS = [
+      { key: "all",        label: TXT.catAll   },
       { key: "film",       label: TXT.catFilm  },
       { key: "commercial", label: TXT.catComm  },
       { key: "music",      label: TXT.catMusic }
     ];
 
-    function cardHTML(w, n) {
-      var cls = "work-card reveal" + (w.lowRes ? " is-lowres" : "");
+    // أزرار التصنيف
+    var bar = document.querySelector("[data-work-filters]");
+    if (bar) {
+      bar.innerHTML = FILTERS.map(function (f) {
+        var n = f.key === "all" ? works.length
+              : works.filter(function (w) { return (w.category || "commercial") === f.key; }).length;
+        if (!n) return "";
+        return '<button type="button" class="filter" data-filter="' + f.key + '"' +
+               (f.key === "all" ? ' aria-pressed="true"' : ' aria-pressed="false"') + '>' +
+               bi(f.label) + "<em>" + n + "</em></button>";
+      }).join("");
+    }
+
+    grid.innerHTML = works.map(function (w, i) {
+      var cls = "work-card reveal";
       return '' +
-        '<a class="' + cls + '" href="work.html?id=' + encodeURIComponent(w.id) + '">' +
-          '<div class="work-thumb"' +
-            (w.posterRatio ? ' style="aspect-ratio:' + w.posterRatio + '"' : "") +
-            ' data-fb-ar="' + esc(TXT.missingImage.ar) + '" data-fb-en="' + esc(TXT.missingImage.en) + '">' +
-            '<span class="work-index">' + n + '</span>' +
+        '<a class="' + cls + '" href="work.html?id=' + encodeURIComponent(w.id) + '"' +
+          ' data-cat="' + esc(w.category || "commercial") + '">' +
+          '<div class="work-thumb" data-fb-ar="' + esc(TXT.missingImage.ar) +
+            '" data-fb-en="' + esc(TXT.missingImage.en) + '">' +
             '<img data-guard src="' + esc(w.poster || "") + '" alt="' + esc(t(w.title)) + '" loading="lazy">' +
+            '<span class="work-role">' + bi(w.role) + "</span>" +
           "</div>" +
           '<div class="work-meta">' +
             "<h3>" + bi(w.title) + "</h3>" +
-            '<ul class="work-tags">' +
-              "<li>" + bi(w.format) + "</li>" +
-              "<li>" + bi(w.genre) + "</li>" +
-              "<li>" + esc(w.year || "") + "</li>" +
-            "</ul>" +
-            '<p class="work-line">' + bi(w.logline) + "</p>" +
-            (w.status ? '<span class="status">' + bi(w.status) + "</span>" : "") +
+            '<span class="work-year">' + esc(w.year || "") + "</span>" +
           "</div>" +
         "</a>";
+    }).join("");
+
+    if (bar) {
+      bar.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-filter]");
+        if (!btn) return;
+        var key = btn.getAttribute("data-filter");
+        bar.querySelectorAll("[data-filter]").forEach(function (b2) {
+          b2.setAttribute("aria-pressed", String(b2 === btn));
+        });
+        grid.querySelectorAll(".work-card").forEach(function (c) {
+          c.hidden = !(key === "all" || c.getAttribute("data-cat") === key);
+        });
+      });
     }
-
-    var html = "", ordered = [];
-    GROUPS.forEach(function (g) {
-      var list = works.filter(function (w) { return (w.category || "commercial") === g.key; });
-      if (!list.length) return;
-      html += '<div class="work-group">' +
-                '<h3 class="group-head"><span>' + bi(g.label) + "</span>" +
-                  '<em>' + list.length + "</em></h3>" +
-                '<div class="work-grid">' +
-                  list.map(function (w, i) {
-                    ordered.push(w);
-                    return cardHTML(w, String(i + 1).padStart(2, "0"));
-                  }).join("") +
-                "</div></div>";
-    });
-    grid.innerHTML = html;
-
-    // الكارت العريض كل ٣ كروت جوّه كل مجموعة — والمشاريع قليلة الدقة بتتخطّى
-    grid.querySelectorAll(".work-grid").forEach(function (g) {
-      var cards = g.querySelectorAll(".work-card");
-      for (var k = 0; k < cards.length; k += 3) {
-        var pick = k;
-        while (pick < cards.length && cards[pick].classList.contains("is-lowres")) pick++;
-        if (pick < cards.length && pick < k + 3) cards[pick].classList.add("is-wide");
-      }
-    });
 
     guardImages(grid);
     initReveal(grid);
     refreshFallbacks(grid);
-    initCardPreview(grid, ordered);
+    initCardPreview(grid, works);
   }
 
   /* ---------- 7) صفحة العمل المفردة ---------- */
