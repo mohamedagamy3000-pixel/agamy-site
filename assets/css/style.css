@@ -706,3 +706,7 @@ html[data-lang="en"] .proof-stats dd{ font-family:var(--font-en); font-weight:40
 }
 .awards .kicker{ margin-bottom:1.25rem; }
 .awards .creds-list{ max-width:70ch; }
+
+.creds-more{ margin:1.1rem 0 0; font-size:.85rem; }
+.creds-more a{ color:var(--accent); border-bottom:1px solid transparent; transition:border-color .25s var(--ease); }
+.creds-more a:hover{ border-bottom-color:var(--accent); }

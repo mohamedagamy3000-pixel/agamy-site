@@ -75,33 +75,76 @@ const SITE = {
       genre:  { ar: "دراما", en: "Drama" },
       year:   "2022",
       role:   { ar: "مدير إنتاج", en: "Production Manager" },
-      status: { ar: "١١ مهرجان دولي · ٨ دول", en: "11 international festivals · 8 countries" },
+      status: { ar: "٢٨ مهرجان دولي · ٥ جوايز", en: "28 international festivals · 5 awards" },
       // تسمية الخانة دي في صفحة المشروع. لو مكتبتهاش بتبقى «العميل».
       statusLabel: { ar: "العرض", en: "Screenings" },
       logline:{
         ar: "فيلم قصير بالأبيض والأسود — عرضه العالمي الأول في مهرجان الفيلم العربي في روتردام.",
         en: "A black-and-white short film — world premiere at the Arab Film Festival in Rotterdam."
       },
-      // المهرجانات والجوايز — بتظهر كقايمة في صفحة المشروع.
-      // win: true بيخلّي السطر مميّز بنقطة دهبي.
+      // ٢٨ مهرجان وجايزة — من FilmFreeway. win: true = فوز فعلي.
       awards: [
         { win: true,
-          ar: "جايزة لجنة التحكيم — أحسن فيلم روائي قصير · مهرجان سانتا كروز السينمائي الدولي، الأرجنتين",
-          en: "Winner, Best Fiction Short Film (Jury Award) · Santa Cruz International Film Festival, Argentina" },
-        { ar: "العرض العالمي الأول · مهرجان الفيلم العربي، روتردام — هولندا",
-          en: "World premiere · Arab Film Festival, Rotterdam — Netherlands" },
-        { ar: "عُرض في Film at Lincoln Center · مهرجان نيويورك للفيلم الأفريقي (الدورة ٣٠)",
-          en: "Screened at Film at Lincoln Center · New York African Film Festival (30th edition)" },
-        { ar: "المسابقة الرسمية · مهرجان AfryKamera للفيلم الأفريقي، وارسو — بولندا",
-          en: "Official competition · AfryKamera African Film Festival, Warsaw — Poland" },
-        { ar: "المسابقة الرسمية للأفلام القصيرة · مهرجان ماتيرا السينمائي الدولي — إيطاليا",
-          en: "Official short film competition · Matera International Film Festival — Italy" },
-        { ar: "العرض الأول في أمريكا الشمالية · مهرجان أوريجون للأفلام القصيرة، بورتلاند — أمريكا",
-          en: "North American premiere · Oregon Short Film Festival, Portland — USA" },
-        { ar: "المسابقة الرسمية · مهرجان تكساس للأفلام القصيرة، سان أنطونيو — أمريكا",
-          en: "Official competition · Texas Short Film Festival, San Antonio — USA" },
-        { ar: "المسابقة الرسمية · مهرجان أوكوتوكس السينمائي — كندا",
-          en: "Official competition · Okotoks Film Festival — Canada" }
+          ar: "فوز — جايزة لجنة التحكيم، أحسن فيلم روائي قصير · سانتا كروز السينمائي الدولي، الأرجنتين",
+          en: "Winner — Jury Award, Best Fiction Short Film · Santa Cruz International Film Festival, Argentina" },
+        { win: true,
+          ar: "فوز — جايزة البرج الذهبي، أحسن فيلم مصري قصير · القاهرة الدولي للفيلم القصير",
+          en: "Winner — Golden Tower Award, Best Egyptian Short Film · Cairo International Short Film Festival" },
+        { win: true,
+          ar: "فوز — جايزة لجنة التحكيم، أحسن فيلم روائي قصير · لاباز السينمائي الدولي، بوليفيا",
+          en: "Winner — Jury Prize, Best Narrative Short Film · La Paz International Film Festival, Bolivia" },
+        { win: true,
+          ar: "فوز — جايزة لجنة التحكيم، مسابقة الأفلام القصيرة · مهرجان القدس للفيلم العربي",
+          en: "Winner — Jury Prize, Short Film Competition · Jerusalem Arab Film Festival" },
+        { win: true,
+          ar: "فوز — تنويه خاص، مسابقة الأفلام القصيرة · ماتيرا السينمائي الدولي، إيطاليا",
+          en: "Winner — Honorable Mention, Short Film Competition · Matera International Film Festival, Italy" },
+        { ar: "اختيار رسمي — Film at Lincoln Center · نيويورك للفيلم الأفريقي (الدورة ٣٠)",
+          en: "Official Selection — Film at Lincoln Center · New York African Film Festival (30th edition)" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن فيلم قصير · مهرجان الفيلم العربي، روتردام",
+          en: "Nominee — Jury Award, Best Short Film · Arab Film Festival Rotterdam" },
+        { ar: "ترشيح — جايزة الجمهور، أحسن فيلم قصير · أوكوتوكس السينمائي، كندا",
+          en: "Nominee — Audience Award, Best Short Film · Okotoks Film Festival, Canada" },
+        { ar: "المسابقة الرسمية — ترشيح لجايزة لجنة التحكيم · AfryKamera للفيلم الأفريقي، وارسو",
+          en: "Official Competition — Jury Award nominee · AfryKamera African Film Festival, Warsaw" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن طاقم تمثيل · أوريجون للأفلام القصيرة، بورتلاند",
+          en: "Nominee — Jury Prize, Best Ensemble Cast · Oregon Short Film Festival, Portland" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن فيلم · تكساس للأفلام القصيرة، سان أنطونيو",
+          en: "Nominee — Jury Prize, Best Picture · Texas Short Film Festival, San Antonio" },
+        { ar: "ترشيح — جايزة اليمامة لاختيار الجمهور · تورونتو للفيلم العربي",
+          en: "Nominee — Yamama Audience Choice Award · Toronto Arab Film Festival" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن سيناريو · مهرجان الفيلم الأفريقي (TAFF)، دالاس",
+          en: "Nominee — Jury Award, Best Screenplay · The African Film Festival (TAFF), Dallas" },
+        { ar: "ترشيح — مسابقة صنّاع الأفلام الأفارقة الشباب · لوفان للفيلم الأفريقي، بلجيكا",
+          en: "Nominee — Young Afrikan Filmmakers Competition · Leuven African Film Festival, Belgium" },
+        { ar: "ترشيح — جايزة النيل الكبرى، أحسن فيلم قصير · الأقصر للسينما الأفريقية",
+          en: "Nominee — Grand Nile Prize, Best Short Film · Luxor African Film Festival" },
+        { ar: "ترشيح — جايزة الكهف الذهبي، أحسن فيلم قصير · طنجة السينمائي الدولي، المغرب",
+          en: "Nominee — Golden Cave Award, Best Short Film · Tangier International Film Festival, Morocco" },
+        { ar: "ترشيح — جايزة الباوباب، أحسن فيلم قصير · Film Africa، لندن",
+          en: "Nominee — Baobab Award, Best Short Film · Film Africa, London" },
+        { ar: "ترشيح — الجائزة الكبرى، أحسن فيلم · يريفان الدولي للأفلام القصيرة، أرمينيا",
+          en: "Nominee — Grand Prix, Best Film · Yerevan International Short Film Festival, Armenia" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، المسابقة الدولية · ألميريا السينمائي الدولي، إسبانيا",
+          en: "Nominee — Jury Award, International Competition · Almeria International Film Festival, Spain" },
+        { ar: "ترشيح — الجائزة الكبرى، قسم الأفلام القصيرة · ساليرنو السينمائي الدولي، إيطاليا",
+          en: "Nominee — Grand Trophy, Short Film Section · Salerno International Film Festival, Italy" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن فيلم روائي قصير · أرلينجتون السينمائي الدولي",
+          en: "Nominee — Jury Prize, Best Narrative Short Film · Arlington International Film Festival" },
+        { ar: "ترشيح — جايزة الفيلم القصير الدولي · المهرجان الدولي لسينما المؤلف، الرباط",
+          en: "Nominee — Best International Short Film · Festival International de Cinéma d'Auteur de Rabat" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن فيلم · زاوية شورتس، القاهرة",
+          en: "Nominee — Jury Award, Best Film · Zawya Shorts, Cairo" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن فيلم روائي قصير · أتلانتا للفيلم الأفريقي",
+          en: "Nominee — Jury Award, Best Narrative Short Film · Atlanta African Film Festival" },
+        { ar: "ترشيح — جايزة باجماتي، أحسن فيلم قصير · نيبال السينمائي الدولي (NIFF)",
+          en: "Nominee — Bagmati Award, Best Live Action Short Film · Nepal International Film Festival" },
+        { ar: "ترشيح — جايزة الرمّانة القرمزية، أحسن فيلم قصير · مهرجان MENA السينمائي",
+          en: "Nominee — Scarlet Pomegranate Award, Best Short Film · MENA Film Festival" },
+        { ar: "ترشيح — جايزة كليمنجارو، أحسن فيلم روائي قصير · مهرجان Africlap",
+          en: "Nominee — Kilimandjaro Award, Best Narrative Short Film · Festival Africlap" },
+        { ar: "ترشيح — جايزة لجنة التحكيم، أحسن فيلم روائي قصير · مهرجان منصّات",
+          en: "Nominee — Jury Award, Outstanding Narrative Short Film · Manassat Film Festival" }
       ],
       poster: "assets/img/stills/hdn-01.jpg",
       stills: [
@@ -118,6 +161,56 @@ const SITE = {
         ar: "إنتاج Alex Films · كتابة وإخراج طارق الشربيني · إنتاج مني محمود.",
         en: "Alex Films · Written and directed by Tarek El Sherbeny · Produced by Mony Mahmoud."
       }
+    },
+
+    {
+      id: "marijuana",
+      published: true,
+      stage: "produced",
+      title:  { ar: "ماريجوانا — هجين", en: "Marijuana — Hageen" },
+      format: { ar: "فيديو كليب · ٣:٤٧", en: "Music video · 3:47" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2021",
+      role:   { ar: "إخراج", en: "Director" },
+      status: { ar: "فريق هجين", en: "Hageen (band)" },
+      logline:{
+        ar: "فيديو كليب لأغنية «ماريجوانا» لفريق هجين — إخراجي.",
+        en: "Music video for \"Marijuana\" by the band Hageen — directed by me."
+      },
+      poster: "assets/img/stills/marijuana-01.jpg",
+      stills: [],
+      video:  { provider: "vimeo", id: "533574568" },
+      notes:  {
+        ar: "إخراج محمد عجمي · مدير تصوير هاشم حاميكس · مونتاج وتصحيح ألوان ItsNoureldin.",
+        en: "Directed by Mohamed Agamy · DOP Hashem Hamix · Edit and colour by ItsNoureldin."
+      }
+    },
+
+    {
+      // ⚠️ لسه مش ظاهر: محتاج أعرف دورك في الفيلم ده بالظبط.
+      //    قولّي الكريدت وأنا أكتبه وأخلّي published: true
+      id: "liveshow",
+      published: false,
+      stage: "produced",
+      title:  { ar: "Live Show", en: "Live Show" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2023",
+      role:   { ar: "؟", en: "?" },
+      status: { ar: "؟", en: "?" },
+      logline:{
+        ar: "فيلم قصير — تصوير في الإسكندرية.",
+        en: "A short film — shot in Alexandria."
+      },
+      poster: "assets/img/stills/liveshow-01.jpg",
+      stills: [
+        "assets/img/stills/liveshow-02.jpg",
+        "assets/img/stills/liveshow-03.jpg",
+        "assets/img/stills/liveshow-04.jpg",
+        "assets/img/stills/liveshow-05.jpg"
+      ],
+      video:  null,
+      notes:  null
     },
 
     {
