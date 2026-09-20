@@ -67,9 +67,101 @@ const SITE = {
      statusLabel → تسمية خانة status في صفحة المشروع (الافتراضي «العميل»). */
   works: [
     {
+      id: "bared",
+      published: true,
+      stage: "produced",
+      category: "film",
+      title:  { ar: "BARED — كابتن ماجد", en: "BARED — Captain Maged" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2025",
+      role:   { ar: "منتج منفّذ", en: "Executive Producer" },
+      status: { ar: "منتج منفّذ", en: "Executive Producer" },
+      logline:{
+        ar: "دراما بحرية، تصوير ليلي على الساحل.",
+        en: "A coastal drama, shot at night on the shore."
+      },
+      poster: "assets/img/stills/bared-04.jpg",
+      posterRatio: 1.78,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/bared-01.jpg",
+        "assets/img/stills/bared-02.jpg",
+        "assets/img/stills/bared-03.jpg",
+        "assets/img/stills/bared-05.jpg",
+        "assets/img/stills/bared-06.jpg",
+        "assets/img/stills/bared-07.jpg",
+        "assets/img/stills/bared-08.jpg"
+      ],
+      video:  { provider: "vimeo", id: "1145608856" },
+      notes:  {
+        ar: "تصوير ليلي في مواقع مفتوحة على البحر.",
+        en: "Night shoot on open coastal locations."
+      }
+    },
+
+    {
+      id: "moussa",
+      published: true,
+      stage: "produced",
+      category: "film",
+      title:  { ar: "آخر أيامك يا موسى", en: "Akher Ayamak Ya Moussa" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2024",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "إنتاج مستقل", en: "Independent" },
+      logline:{
+        ar: "فيلم قصير من إنتاجي — تصوير في الريف المصري.",
+        en: "An independent short film I produced, shot in the Egyptian countryside."
+      },
+      poster: "assets/img/stills/moussa-04.jpg",
+      posterRatio: 1.333,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/moussa-01.jpg",
+        "assets/img/stills/moussa-02.jpg",
+        "assets/img/stills/moussa-03.jpg",
+        "assets/img/stills/moussa-05.jpg",
+        "assets/img/stills/moussa-06.jpg"
+      ],
+      video:  null,
+      notes:  {
+        ar: "إخراج آدم علاء · إنتاج محمد عجمي. تصوير في مواقع خارجية.",
+        en: "Directed by Adam Alaa · Produced by Mohamed Agamy. Shot on location."
+      }
+    },
+
+    {
+      id: "liveshow",
+      published: true,
+      stage: "produced",
+      category: "film",
+      title:  { ar: "Live Show", en: "Live Show" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2023",   // ⚠️ مقدّرة من تاريخ رفع الصور — صحّحها لو غلط
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
+      status: null,
+      logline:{
+        ar: "فيلم قصير — تصوير في الإسكندرية.",
+        en: "A short film — shot in Alexandria."
+      },
+      poster: "assets/img/stills/liveshow-02.jpg",
+      posterRatio: 1.44,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/liveshow-01.jpg",
+        "assets/img/stills/liveshow-03.jpg",
+        "assets/img/stills/liveshow-04.jpg",
+        "assets/img/stills/liveshow-05.jpg"
+      ],
+      video:  null,
+      notes:  null
+    },
+
+    {
       id: "hes-dead-now",
       published: true,
       stage: "produced",
+      category: "film",
       title:  { ar: "هو مات دلوقتي", en: "He's Dead Now" },
       format: { ar: "فيلم قصير", en: "Short film" },
       genre:  { ar: "دراما", en: "Drama" },
@@ -165,75 +257,10 @@ const SITE = {
     },
 
     {
-      id: "trubla",
-      published: true,
-      stage: "produced",
-      title:  { ar: "Trubla", en: "Trubla" },
-      format: { ar: "إعلان إطلاق تطبيق", en: "App launch commercial" },
-      genre:  { ar: "إعلان", en: "Commercial" },
-      year:   "2025",
-      role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "Trubla", en: "Trubla" },
-      logline:{
-        ar: "إعلان إطلاق بمشاهد وديكورات متعددة — من سطح القمر لشارع ليلي بالنيون.",
-        en: "A launch film across multiple built sets — from a lunar surface to a neon-lit street."
-      },
-      poster: "assets/img/stills/trubla-02.jpg",
-      posterRatio: 1.813,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/trubla-01.jpg",
-        "assets/img/stills/trubla-03.jpg",
-        "assets/img/stills/trubla-04.jpg",
-        "assets/img/stills/trubla-05.jpg",
-        "assets/img/stills/trubla-06.jpg",
-        "assets/img/stills/trubla-07.jpg"
-      ],
-      video:  { provider: "vimeo", id: "1197439509" },
-      notes:  {
-        ar: "إخراج بيشوي كمال · تصوير فيلوباتير مراد. ديكورات مبنية بالكامل.",
-        en: "Directed by Bishoy Kamal, shot by Filopater Murad. Fully built sets."
-      }
-    },
-
-    {
-      id: "marijuana",
-      published: true,
-      stage: "produced",
-      title:  { ar: "ماريجوانا — هجين", en: "Marijuana — Hageen" },
-      format: { ar: "فيديو كليب · ٣:٤٧", en: "Music video · 3:47" },
-      genre:  { ar: "موسيقى", en: "Music" },
-      year:   "2021",
-      role:   { ar: "إخراج", en: "Director" },
-      status: { ar: "فريق هجين", en: "Hageen (band)" },
-      logline:{
-        ar: "فيديو كليب لأغنية «ماريجوانا» لفريق هجين — إخراجي.",
-        en: "Music video for \"Marijuana\" by the band Hageen — directed by me."
-      },
-      poster: "assets/img/stills/marijuana-04.jpg",
-      posterRatio: 2.389,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/marijuana-01.jpg",
-        "assets/img/stills/marijuana-02.jpg",
-        "assets/img/stills/marijuana-03.jpg",
-        "assets/img/stills/marijuana-05.jpg",
-        "assets/img/stills/marijuana-06.jpg",
-        "assets/img/stills/marijuana-07.jpg",
-        "assets/img/stills/marijuana-08.jpg",
-        "assets/img/stills/marijuana-09.jpg",
-        "assets/img/stills/marijuana-10.jpg",
-        "assets/img/stills/marijuana-11.jpg"
-      ],
-      video:  { provider: "vimeo", id: "533574568" },
-      notes:  {
-        ar: "إخراج محمد عجمي · مدير تصوير هاشم حاميكس · مونتاج وتصحيح ألوان ItsNoureldin.",
-        en: "Directed by Mohamed Agamy · DOP Hashem Hamix · Edit and colour by ItsNoureldin."
-      }
-    },
-
-    {
       id: "madonna",
       published: true,
       stage: "produced",
+      category: "film",
       title:  { ar: "مادونا", en: "Madonna" },
       format: { ar: "فيلم قصير", en: "Short film" },
       genre:  { ar: "دراما", en: "Drama" },
@@ -266,119 +293,34 @@ const SITE = {
     },
 
     {
-      id: "raya",
+      id: "trubla",
       published: true,
       stage: "produced",
-      title:  { ar: "Raya Auto Premium", en: "Raya Auto Premium" },
-      format: { ar: "إعلان تليفزيوني", en: "TVC" },
+      category: "commercial",
+      title:  { ar: "Trubla", en: "Trubla" },
+      format: { ar: "إعلان إطلاق تطبيق", en: "App launch commercial" },
       genre:  { ar: "إعلان", en: "Commercial" },
-      year:   "2023",
-      role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "Raya Auto Premium", en: "Raya Auto Premium" },
-      logline:{
-        ar: "إعلان «Golf Car-ried» لراية أوتو بريميم — تصوير على الساحل.",
-        en: "The Golf Car-ried TVC for Raya Auto Premium — shot on the coast."
-      },
-      poster: "assets/img/stills/raya-01.jpg",
-      posterRatio: 1.783,
-      stills: [
-        "assets/img/stills/raya-02.jpg",
-        "assets/img/stills/raya-03.jpg",
-        "assets/img/stills/raya-04.jpg",
-        "assets/img/stills/raya-05.jpg"
-      ],
-      video:  null,
-      notes:  {
-        ar: "إخراج محمد عبدالعزيز سليمان · شركة إنتاج Rivolta · تصوير فيلوباتير مراد.",
-        en: "Directed by Mohamed Abdelaziz Soliman · Production house Rivolta · DOP Filopater Morad."
-      }
-    },
-
-    {
-      id: "liveshow",
-      published: true,
-      stage: "produced",
-      title:  { ar: "Live Show", en: "Live Show" },
-      format: { ar: "فيلم قصير", en: "Short film" },
-      genre:  { ar: "دراما", en: "Drama" },
-      year:   "2023",   // ⚠️ مقدّرة من تاريخ رفع الصور — صحّحها لو غلط
-      role:   { ar: "مدير إنتاج", en: "Production Manager" },
-      status: null,
-      logline:{
-        ar: "فيلم قصير — تصوير في الإسكندرية.",
-        en: "A short film — shot in Alexandria."
-      },
-      poster: "assets/img/stills/liveshow-02.jpg",
-      posterRatio: 1.44,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/liveshow-01.jpg",
-        "assets/img/stills/liveshow-03.jpg",
-        "assets/img/stills/liveshow-04.jpg",
-        "assets/img/stills/liveshow-05.jpg"
-      ],
-      video:  null,
-      notes:  null
-    },
-
-    {
-      id: "bared",
-      published: true,
-      stage: "produced",
-      title:  { ar: "BARED — كابتن ماجد", en: "BARED — Captain Maged" },
-      format: { ar: "فيلم قصير", en: "Short film" },
-      genre:  { ar: "دراما", en: "Drama" },
       year:   "2025",
-      role:   { ar: "منتج منفّذ", en: "Executive Producer" },
-      status: { ar: "منتج منفّذ", en: "Executive Producer" },
-      logline:{
-        ar: "دراما بحرية، تصوير ليلي على الساحل.",
-        en: "A coastal drama, shot at night on the shore."
-      },
-      poster: "assets/img/stills/bared-04.jpg",
-      posterRatio: 1.78,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/bared-01.jpg",
-        "assets/img/stills/bared-02.jpg",
-        "assets/img/stills/bared-03.jpg",
-        "assets/img/stills/bared-05.jpg",
-        "assets/img/stills/bared-06.jpg",
-        "assets/img/stills/bared-07.jpg",
-        "assets/img/stills/bared-08.jpg"
-      ],
-      video:  { provider: "vimeo", id: "1145608856" },
-      notes:  {
-        ar: "تصوير ليلي في مواقع مفتوحة على البحر.",
-        en: "Night shoot on open coastal locations."
-      }
-    },
-
-    {
-      id: "moussa",
-      published: true,
-      stage: "produced",
-      title:  { ar: "آخر أيامك يا موسى", en: "Akher Ayamak Ya Moussa" },
-      format: { ar: "فيلم قصير", en: "Short film" },
-      genre:  { ar: "دراما", en: "Drama" },
-      year:   "2024",
       role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "إنتاج مستقل", en: "Independent" },
+      status: { ar: "Trubla", en: "Trubla" },
       logline:{
-        ar: "فيلم قصير من إنتاجي — تصوير في الريف المصري.",
-        en: "An independent short film I produced, shot in the Egyptian countryside."
+        ar: "إعلان إطلاق بمشاهد وديكورات متعددة — من سطح القمر لشارع ليلي بالنيون.",
+        en: "A launch film across multiple built sets — from a lunar surface to a neon-lit street."
       },
-      poster: "assets/img/stills/moussa-04.jpg",
-      posterRatio: 1.333,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      poster: "assets/img/stills/trubla-02.jpg",
+      posterRatio: 1.813,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
-        "assets/img/stills/moussa-01.jpg",
-        "assets/img/stills/moussa-02.jpg",
-        "assets/img/stills/moussa-03.jpg",
-        "assets/img/stills/moussa-05.jpg",
-        "assets/img/stills/moussa-06.jpg"
+        "assets/img/stills/trubla-01.jpg",
+        "assets/img/stills/trubla-03.jpg",
+        "assets/img/stills/trubla-04.jpg",
+        "assets/img/stills/trubla-05.jpg",
+        "assets/img/stills/trubla-06.jpg",
+        "assets/img/stills/trubla-07.jpg"
       ],
-      video:  null,
+      video:  { provider: "vimeo", id: "1197439509" },
       notes:  {
-        ar: "إخراج آدم علاء · إنتاج محمد عجمي. تصوير في مواقع خارجية.",
-        en: "Directed by Adam Alaa · Produced by Mohamed Agamy. Shot on location."
+        ar: "إخراج بيشوي كمال · تصوير فيلوباتير مراد. ديكورات مبنية بالكامل.",
+        en: "Directed by Bishoy Kamal, shot by Filopater Murad. Fully built sets."
       }
     },
 
@@ -386,6 +328,7 @@ const SITE = {
       id: "laverne-ksa",
       published: true,
       stage: "produced",
+      category: "commercial",
       title:  { ar: "Laverne KSA", en: "Laverne KSA" },
       format: { ar: "فيلم حملة", en: "Campaign film" },
       genre:  { ar: "إعلان", en: "Commercial" },
@@ -415,6 +358,7 @@ const SITE = {
       id: "gouna",
       published: true,
       stage: "produced",
+      category: "commercial",
       title:  { ar: "نادي الجونة", en: "El Gouna Club" },
       format: { ar: "إعلان رياضي", en: "Sports commercial" },
       genre:  { ar: "إعلان", en: "Commercial" },
@@ -439,38 +383,10 @@ const SITE = {
     },
 
     {
-      id: "bebo",
-      published: true,
-      stage: "produced",
-      title:  { ar: "بيبو — بنحب نغيب", en: "Bebo — Bn7b N8eeb" },
-      format: { ar: "فيديو كليب · ٢:٥٢", en: "Music video · 2:52" },
-      genre:  { ar: "موسيقى", en: "Music" },
-      year:   "2023",
-      role:   { ar: "إخراج", en: "Director" },
-      status: { ar: "بيبو", en: "Bebo" },
-      logline:{
-        ar: "فيديو كليب «بنحب نغيب» لبيبو — إخراجي، تصوير على ساحل الإسكندرية.",
-        en: "Music video for Bn7b N8eeb by Bebo — directed by me, shot on the Alexandria coast."
-      },
-      poster: "assets/img/stills/bebo-01.jpg",
-      posterRatio: 1.783,
-      stills: [
-        "assets/img/stills/bebo-02.jpg",
-        "assets/img/stills/bebo-03.jpg",
-        "assets/img/stills/bebo-04.jpg",
-        "assets/img/stills/bebo-05.jpg"
-      ],
-      video:  { provider: "vimeo", id: "854573021" },
-      notes:  {
-        ar: "إخراج محمد عجمي · تصوير فيلوباتير مراد · إنتاج عمروش بدر.",
-        en: "Directed by Mohamed Agamy · DOP Filopatre Morad · Produced by Amrosh Badr."
-      }
-    },
-
-    {
       id: "makka",
       published: true,
       stage: "produced",
+      category: "commercial",
       title:  { ar: "مكة جوس", en: "Makka Juice" },
       format: { ar: "إعلان رمضان", en: "Ramadan TVC" },
       genre:  { ar: "إعلان", en: "Commercial" },
@@ -498,43 +414,10 @@ const SITE = {
     },
 
     {
-      id: "wa7dani",
-      published: true,
-      stage: "produced",
-      title:  { ar: "وحداني", en: "Wa7dani" },
-      format: { ar: "فيديو كليب · ٢:١٥", en: "Music video · 2:15" },
-      genre:  { ar: "موسيقى", en: "Music" },
-      year:   "2022",
-      role:   { ar: "إخراج", en: "Director" },
-      status: { ar: "إخراج", en: "Directed" },
-      logline:{
-        ar: "فيديو كليب «وحداني» — إخراجي، تصوير ليلي في الإسكندرية.",
-        en: "Music video for Wa7dani — directed by me, a night shoot in Alexandria."
-      },
-      poster: "assets/img/stills/wa7dani-01.jpg",
-      posterRatio: 2.377,
-      stills: [
-        "assets/img/stills/wa7dani-02.jpg",
-        "assets/img/stills/wa7dani-03.jpg",
-        "assets/img/stills/wa7dani-04.jpg",
-        "assets/img/stills/wa7dani-05.jpg",
-        "assets/img/stills/wa7dani-06.jpg",
-        "assets/img/stills/wa7dani-07.jpg",
-        "assets/img/stills/wa7dani-08.jpg",
-        "assets/img/stills/wa7dani-09.jpg",
-        "assets/img/stills/wa7dani-10.jpg"
-      ],
-      video:  { provider: "vimeo", id: "701768449" },
-      notes:  {
-        ar: "إخراج محمد عجمي · مدير تصوير أيمن محمود.",
-        en: "Directed by Mohamed Agamy · DOP Ayman Mahmoud."
-      }
-    },
-
-    {
       id: "assaf",
       published: true,
       stage: "produced",
+      category: "commercial",
       title:  { ar: "ASSAF Eyewear", en: "ASSAF Eyewear" },
       format: { ar: "حملة تصوير", en: "Photo campaign" },
       genre:  { ar: "إعلان", en: "Commercial" },
@@ -560,9 +443,261 @@ const SITE = {
     },
 
     {
+      id: "miss-laverne",
+      published: true,
+      stage: "produced",
+      category: "commercial",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
+      title:  { ar: "Miss Laverne", en: "Miss Laverne" },
+      format: { ar: "حملة عطور", en: "Perfume campaign" },
+      genre:  { ar: "إعلان", en: "Commercial" },
+      year:   "2025",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
+      logline:{
+        ar: "حملة عطر نسائي لبراند سعودي — اتصوّرت في مصر.",
+        en: "A women's fragrance campaign for a Saudi brand — shot in Egypt."
+      },
+      poster: "assets/img/stills/misslaverne-04.jpg",
+      posterRatio: 0.567,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/misslaverne-01.jpg",
+        "assets/img/stills/misslaverne-02.jpg",
+        "assets/img/stills/misslaverne-03.jpg"
+      ],
+      video:  { provider: "vimeo", id: "1197445326" },
+      notes:  {
+        ar: "حملة رأسية للسوشيال والتليفزيون.",
+        en: "A vertical campaign for social and broadcast."
+      }
+    },
+
+    {
+      id: "atlantis",
+      published: true,
+      stage: "produced",
+      category: "commercial",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
+      title:  { ar: "Atlantis Homme", en: "Atlantis Homme" },
+      format: { ar: "حملة عطور", en: "Fragrance campaign" },
+      genre:  { ar: "إعلان", en: "Commercial" },
+      year:   "2025",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "Atlantis Homme — السعودية", en: "Atlantis Homme — KSA" },
+      logline:{
+        ar: "حملة عطر رجالي — تصوير على البحر في مصر.",
+        en: "A men's fragrance campaign — shot on the coast in Egypt."
+      },
+      poster: "assets/img/stills/atlantis-01.jpg",
+      posterRatio: 0.557,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/atlantis-02.jpg",
+        "assets/img/stills/atlantis-03.jpg"
+      ],
+      video:  { provider: "vimeo", id: "1207725529" },
+      notes:  {
+        ar: "تصوير على البحر في يوم واحد.",
+        en: "A single-day coastal shoot."
+      }
+    },
+
+    {
+      id: "bella",
+      published: true,
+      stage: "produced",
+      category: "commercial",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
+      title:  { ar: "Bella by Laverne", en: "Bella by Laverne" },
+      format: { ar: "فيلم حملة", en: "Campaign film" },
+      genre:  { ar: "إعلان", en: "Commercial" },
+      year:   "2025",
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
+      status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
+      logline:{
+        ar: "حملة عطور لبراند سعودي — اتصوّرت في مصر.",
+        en: "A fragrance campaign for a Saudi brand — shot in Egypt."
+      },
+      poster: "assets/img/stills/bella-03.jpg",
+      posterRatio: 0.559,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/bella-01.jpg",
+        "assets/img/stills/bella-02.jpg",
+        "assets/img/stills/bella-04.jpg"
+      ],
+      video:  { provider: "vimeo", id: "1218864846" },
+      notes:  {
+        ar: "مواقع خارجية على البحر.",
+        en: "Exterior coastal locations."
+      }
+    },
+
+    {
+      id: "garden",
+      published: true,
+      stage: "produced",
+      category: "commercial",
+      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
+      title:  { ar: "Miss Laverne Garden", en: "Miss Laverne Garden" },
+      format: { ar: "فيلم حملة", en: "Campaign film" },
+      genre:  { ar: "إعلان", en: "Commercial" },
+      year:   "2024",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
+      logline:{
+        ar: "حملة عطور في حديقة — تصوير نهاري في مصر.",
+        en: "A garden fragrance campaign — a daylight shoot in Egypt."
+      },
+      poster: "assets/img/stills/garden-03.jpg",
+      posterRatio: 0.663,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/garden-01.jpg",
+        "assets/img/stills/garden-02.jpg",
+        "assets/img/stills/garden-04.jpg",
+        "assets/img/stills/garden-05.jpg"
+      ],
+      video:  { provider: "vimeo", id: "1110711442" },
+      notes:  {
+        ar: "تصوير نهاري في موقع خارجي واحد.",
+        en: "A daylight shoot on a single exterior location."
+      }
+    },
+
+    {
+      id: "raya",
+      published: true,
+      stage: "produced",
+      category: "commercial",
+      title:  { ar: "Raya Auto Premium", en: "Raya Auto Premium" },
+      format: { ar: "إعلان تليفزيوني", en: "TVC" },
+      genre:  { ar: "إعلان", en: "Commercial" },
+      year:   "2023",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "Raya Auto Premium", en: "Raya Auto Premium" },
+      logline:{
+        ar: "إعلان «Golf Car-ried» لراية أوتو بريميم — تصوير على الساحل.",
+        en: "The Golf Car-ried TVC for Raya Auto Premium — shot on the coast."
+      },
+      poster: "assets/img/stills/raya-03.jpg",
+      posterRatio: 1.783,
+      stills: [
+        "assets/img/stills/raya-01.jpg",
+        "assets/img/stills/raya-02.jpg",
+        "assets/img/stills/raya-04.jpg",
+        "assets/img/stills/raya-05.jpg"
+      ],
+      video:  null,
+      notes:  {
+        ar: "إخراج محمد عبدالعزيز سليمان · شركة إنتاج Rivolta · تصوير فيلوباتير مراد.",
+        en: "Directed by Mohamed Abdelaziz Soliman · Production house Rivolta · DOP Filopater Morad."
+      }
+    },
+
+    {
+      id: "bebo",
+      published: true,
+      stage: "produced",
+      category: "music",
+      title:  { ar: "بيبو — بنحب نغيب", en: "Bebo — Bn7b N8eeb" },
+      format: { ar: "فيديو كليب · ٢:٥٢", en: "Music video · 2:52" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2023",
+      role:   { ar: "إخراج", en: "Director" },
+      status: { ar: "بيبو", en: "Bebo" },
+      logline:{
+        ar: "فيديو كليب «بنحب نغيب» لبيبو — إخراجي، تصوير على ساحل الإسكندرية.",
+        en: "Music video for Bn7b N8eeb by Bebo — directed by me, shot on the Alexandria coast."
+      },
+      poster: "assets/img/stills/bebo-05.jpg",
+      posterRatio: 1.783,
+      stills: [
+        "assets/img/stills/bebo-01.jpg",
+        "assets/img/stills/bebo-02.jpg",
+        "assets/img/stills/bebo-03.jpg",
+        "assets/img/stills/bebo-04.jpg"
+      ],
+      video:  { provider: "vimeo", id: "854573021" },
+      notes:  {
+        ar: "إخراج محمد عجمي · تصوير فيلوباتير مراد · إنتاج عمروش بدر.",
+        en: "Directed by Mohamed Agamy · DOP Filopatre Morad · Produced by Amrosh Badr."
+      }
+    },
+
+    {
+      id: "wa7dani",
+      published: true,
+      stage: "produced",
+      category: "music",
+      title:  { ar: "وحداني", en: "Wa7dani" },
+      format: { ar: "فيديو كليب · ٢:١٥", en: "Music video · 2:15" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2022",
+      role:   { ar: "إخراج", en: "Director" },
+      status: { ar: "إخراج", en: "Directed" },
+      logline:{
+        ar: "فيديو كليب «وحداني» — إخراجي، تصوير ليلي في الإسكندرية.",
+        en: "Music video for Wa7dani — directed by me, a night shoot in Alexandria."
+      },
+      poster: "assets/img/stills/wa7dani-03.jpg",
+      posterRatio: 2.345,
+      stills: [
+        "assets/img/stills/wa7dani-01.jpg",
+        "assets/img/stills/wa7dani-02.jpg",
+        "assets/img/stills/wa7dani-04.jpg",
+        "assets/img/stills/wa7dani-05.jpg",
+        "assets/img/stills/wa7dani-06.jpg",
+        "assets/img/stills/wa7dani-07.jpg",
+        "assets/img/stills/wa7dani-08.jpg",
+        "assets/img/stills/wa7dani-09.jpg",
+        "assets/img/stills/wa7dani-10.jpg"
+      ],
+      video:  { provider: "vimeo", id: "701768449" },
+      notes:  {
+        ar: "إخراج محمد عجمي · مدير تصوير أيمن محمود.",
+        en: "Directed by Mohamed Agamy · DOP Ayman Mahmoud."
+      }
+    },
+
+    {
+      id: "marijuana",
+      published: true,
+      stage: "produced",
+      category: "music",
+      title:  { ar: "ماريجوانا — هجين", en: "Marijuana — Hageen" },
+      format: { ar: "فيديو كليب · ٣:٤٧", en: "Music video · 3:47" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2021",
+      role:   { ar: "إخراج", en: "Director" },
+      status: { ar: "فريق هجين", en: "Hageen (band)" },
+      logline:{
+        ar: "فيديو كليب لأغنية «ماريجوانا» لفريق هجين — إخراجي.",
+        en: "Music video for \"Marijuana\" by the band Hageen — directed by me."
+      },
+      poster: "assets/img/stills/marijuana-04.jpg",
+      posterRatio: 2.389,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/marijuana-01.jpg",
+        "assets/img/stills/marijuana-02.jpg",
+        "assets/img/stills/marijuana-03.jpg",
+        "assets/img/stills/marijuana-05.jpg",
+        "assets/img/stills/marijuana-06.jpg",
+        "assets/img/stills/marijuana-07.jpg",
+        "assets/img/stills/marijuana-08.jpg",
+        "assets/img/stills/marijuana-09.jpg",
+        "assets/img/stills/marijuana-10.jpg",
+        "assets/img/stills/marijuana-11.jpg"
+      ],
+      video:  { provider: "vimeo", id: "533574568" },
+      notes:  {
+        ar: "إخراج محمد عجمي · مدير تصوير هاشم حاميكس · مونتاج وتصحيح ألوان ItsNoureldin.",
+        en: "Directed by Mohamed Agamy · DOP Hashem Hamix · Edit and colour by ItsNoureldin."
+      }
+    },
+
+    {
       id: "g3zt",
       published: true,
       stage: "produced",
+      category: "music",
       title:  { ar: "عجزت", en: "3gzt" },
       format: { ar: "فيديو كليب · ١:٥٧", en: "Music video · 1:57" },
       genre:  { ar: "موسيقى", en: "Music" },
@@ -593,155 +728,6 @@ const SITE = {
         en: "Directed by Mohamed Agamy · DOP, edit and colour by Daniel Atef Aziz."
       }
     },
-
-    {
-      id: "miss-laverne",
-      published: true,
-      stage: "produced",
-      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
-      title:  { ar: "Miss Laverne", en: "Miss Laverne" },
-      format: { ar: "حملة عطور", en: "Perfume campaign" },
-      genre:  { ar: "إعلان", en: "Commercial" },
-      year:   "2025",
-      role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
-      logline:{
-        ar: "حملة عطر نسائي لبراند سعودي — اتصوّرت في مصر.",
-        en: "A women's fragrance campaign for a Saudi brand — shot in Egypt."
-      },
-      poster: "assets/img/stills/misslaverne-04.jpg",
-      posterRatio: 0.567,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/misslaverne-01.jpg",
-        "assets/img/stills/misslaverne-02.jpg",
-        "assets/img/stills/misslaverne-03.jpg"
-      ],
-      video:  { provider: "vimeo", id: "1197445326" },
-      notes:  {
-        ar: "حملة رأسية للسوشيال والتليفزيون.",
-        en: "A vertical campaign for social and broadcast."
-      }
-    },
-
-    {
-      id: "atlantis",
-      published: true,
-      stage: "produced",
-      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
-      title:  { ar: "Atlantis Homme", en: "Atlantis Homme" },
-      format: { ar: "حملة عطور", en: "Fragrance campaign" },
-      genre:  { ar: "إعلان", en: "Commercial" },
-      year:   "2025",
-      role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "Atlantis Homme — السعودية", en: "Atlantis Homme — KSA" },
-      logline:{
-        ar: "حملة عطر رجالي — تصوير على البحر في مصر.",
-        en: "A men's fragrance campaign — shot on the coast in Egypt."
-      },
-      poster: "assets/img/stills/atlantis-01.jpg",
-      posterRatio: 0.557,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/atlantis-02.jpg",
-        "assets/img/stills/atlantis-03.jpg"
-      ],
-      video:  { provider: "vimeo", id: "1207725529" },
-      notes:  {
-        ar: "تصوير على البحر في يوم واحد.",
-        en: "A single-day coastal shoot."
-      }
-    },
-
-    {
-      id: "bella",
-      published: true,
-      stage: "produced",
-      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
-      title:  { ar: "Bella by Laverne", en: "Bella by Laverne" },
-      format: { ar: "فيلم حملة", en: "Campaign film" },
-      genre:  { ar: "إعلان", en: "Commercial" },
-      year:   "2025",
-      role:   { ar: "مدير إنتاج", en: "Production Manager" },
-      status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
-      logline:{
-        ar: "حملة عطور لبراند سعودي — اتصوّرت في مصر.",
-        en: "A fragrance campaign for a Saudi brand — shot in Egypt."
-      },
-      poster: "assets/img/stills/bella-03.jpg",
-      posterRatio: 0.559,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/bella-01.jpg",
-        "assets/img/stills/bella-02.jpg",
-        "assets/img/stills/bella-04.jpg"
-      ],
-      video:  { provider: "vimeo", id: "1218864846" },
-      notes:  {
-        ar: "مواقع خارجية على البحر.",
-        en: "Exterior coastal locations."
-      }
-    },
-
-    {
-      id: "garden",
-      published: true,
-      stage: "produced",
-      lowRes: true,   // الصورة الأصلية صغيرة — بتتعرض بحجم أصغر عشان تفضل حادّة
-      title:  { ar: "Miss Laverne Garden", en: "Miss Laverne Garden" },
-      format: { ar: "فيلم حملة", en: "Campaign film" },
-      genre:  { ar: "إعلان", en: "Commercial" },
-      year:   "2024",
-      role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
-      logline:{
-        ar: "حملة عطور في حديقة — تصوير نهاري في مصر.",
-        en: "A garden fragrance campaign — a daylight shoot in Egypt."
-      },
-      poster: "assets/img/stills/garden-03.jpg",
-      posterRatio: 0.663,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/garden-01.jpg",
-        "assets/img/stills/garden-02.jpg",
-        "assets/img/stills/garden-04.jpg",
-        "assets/img/stills/garden-05.jpg"
-      ],
-      video:  { provider: "vimeo", id: "1110711442" },
-      notes:  {
-        ar: "تصوير نهاري في موقع خارجي واحد.",
-        en: "A daylight shoot on a single exterior location."
-      }
-    },
-
-    {
-      id: "cemetery",
-      published: true,
-      stage: "produced",
-      title:  { ar: "المقابر اللاتينية، الإسكندرية", en: "Latin Cemetery, Alexandria" },
-      format: { ar: "مقال مصوّر", en: "Photo essay" },
-      genre:  { ar: "تصوير فوتوغرافي", en: "Photography" },
-      year:   "2019",
-      role:   { ar: "تصوير", en: "Photography" },
-      status: { ar: "مشروع شخصي", en: "Personal project" },
-      logline:{
-        ar: "مقال مصوّر عن المقابر اللاتينية في الإسكندرية.",
-        en: "A photo essay on the Latin Cemetery in Alexandria."
-      },
-      poster: "assets/img/stills/cemetery-01.jpg",
-      posterRatio: 1.779,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/cemetery-02.jpg",
-        "assets/img/stills/cemetery-03.jpg",
-        "assets/img/stills/cemetery-04.jpg",
-        "assets/img/stills/cemetery-05.jpg",
-        "assets/img/stills/cemetery-06.jpg",
-        "assets/img/stills/cemetery-07.jpg",
-        "assets/img/stills/cemetery-08.jpg",
-        "assets/img/stills/cemetery-09.jpg"
-      ],
-      video:  null,
-      notes:  {
-        ar: "مشروع شخصي — تصوير فوتوغرافي.",
-        en: "A personal project — photography."
-      }
-    }
 
   ]
 };

@@ -45,6 +45,9 @@
     watch:   { ar: "شوف الفيلم", en: "Watch the film" },
     moreImg: { ar: "صور من المشروع", en: "From the project" },
     awardsL: { ar: "مهرجانات وجوايز", en: "Festivals & awards" },
+    catFilm:  { ar: "أفلام", en: "Films" },
+    catComm:  { ar: "إعلانات وحملات", en: "Commercials & campaigns" },
+    catMusic: { ar: "فيديو كليبات", en: "Music videos" },
     workedWith: { ar: "اشتغلت مع", en: "Worked with" },
     yearL: { ar: "السنة", en: "Year" }
   };
@@ -165,7 +168,6 @@
     var grid = document.querySelector("[data-work-grid]");
     if (!grid) return;
     var works = producedWorks();
-    // مفيش شغل متصوّر لسه؟ نخفي القسم بدل ما نسيبه فاضي
     var section = document.getElementById("work");
     if (!works.length) {
       if (section) section.hidden = true;
@@ -174,10 +176,15 @@
       return;
     }
     if (section) section.hidden = false;
-    grid.innerHTML = works.map(function (w, i) {
-      var n = String(i + 1).padStart(2, "0");
-      // المشاريع اللي صورها الأصلية صغيرة بتاخد كلاس خاص عشان
-      // ما تتعرضش بحجم أكبر من دقّتها فتبان مضبّبة
+
+    // الأعمال متقسّمة حسب النوع، وكل قسم من الأحدث للأقدم
+    var GROUPS = [
+      { key: "film",       label: TXT.catFilm  },
+      { key: "commercial", label: TXT.catComm  },
+      { key: "music",      label: TXT.catMusic }
+    ];
+
+    function cardHTML(w, n) {
       var cls = "work-card reveal" + (w.lowRes ? " is-lowres" : "");
       return '' +
         '<a class="' + cls + '" href="work.html?id=' + encodeURIComponent(w.id) + '">' +
@@ -186,7 +193,7 @@
             ' data-fb-ar="' + esc(TXT.missingImage.ar) + '" data-fb-en="' + esc(TXT.missingImage.en) + '">' +
             '<span class="work-index">' + n + '</span>' +
             '<img data-guard src="' + esc(w.poster || "") + '" alt="' + esc(t(w.title)) + '" loading="lazy">' +
-          '</div>' +
+          "</div>" +
           '<div class="work-meta">' +
             "<h3>" + bi(w.title) + "</h3>" +
             '<ul class="work-tags">' +
@@ -198,20 +205,38 @@
             (w.status ? '<span class="status">' + bi(w.status) + "</span>" : "") +
           "</div>" +
         "</a>";
-    }).join("");
-    // الكارت العريض كل ٣ كروت — بس المشاريع عالية الدقة بس
-    // (صورة صغيرة متتمدّش على عرض الصفحة)
-    var cards = grid.querySelectorAll(".work-card");
-    for (var k = 0; k < cards.length; k += 3) {
-      var pick = k;
-      while (pick < cards.length && cards[pick].classList.contains("is-lowres")) pick++;
-      if (pick < cards.length && pick < k + 3) cards[pick].classList.add("is-wide");
     }
+
+    var html = "", ordered = [];
+    GROUPS.forEach(function (g) {
+      var list = works.filter(function (w) { return (w.category || "commercial") === g.key; });
+      if (!list.length) return;
+      html += '<div class="work-group">' +
+                '<h3 class="group-head"><span>' + bi(g.label) + "</span>" +
+                  '<em>' + list.length + "</em></h3>" +
+                '<div class="work-grid">' +
+                  list.map(function (w, i) {
+                    ordered.push(w);
+                    return cardHTML(w, String(i + 1).padStart(2, "0"));
+                  }).join("") +
+                "</div></div>";
+    });
+    grid.innerHTML = html;
+
+    // الكارت العريض كل ٣ كروت جوّه كل مجموعة — والمشاريع قليلة الدقة بتتخطّى
+    grid.querySelectorAll(".work-grid").forEach(function (g) {
+      var cards = g.querySelectorAll(".work-card");
+      for (var k = 0; k < cards.length; k += 3) {
+        var pick = k;
+        while (pick < cards.length && cards[pick].classList.contains("is-lowres")) pick++;
+        if (pick < cards.length && pick < k + 3) cards[pick].classList.add("is-wide");
+      }
+    });
 
     guardImages(grid);
     initReveal(grid);
     refreshFallbacks(grid);
-    initCardPreview(grid, works);
+    initCardPreview(grid, ordered);
   }
 
   /* ---------- 7) صفحة العمل المفردة ---------- */
