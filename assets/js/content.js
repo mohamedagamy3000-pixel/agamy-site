@@ -165,6 +165,37 @@ const SITE = {
     },
 
     {
+      id: "trubla",
+      published: true,
+      stage: "produced",
+      title:  { ar: "Trubla", en: "Trubla" },
+      format: { ar: "إعلان إطلاق تطبيق", en: "App launch commercial" },
+      genre:  { ar: "إعلان", en: "Commercial" },
+      year:   "2025",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "Trubla", en: "Trubla" },
+      logline:{
+        ar: "إعلان إطلاق بمشاهد وديكورات متعددة — من سطح القمر لشارع ليلي بالنيون.",
+        en: "A launch film across multiple built sets — from a lunar surface to a neon-lit street."
+      },
+      poster: "assets/img/stills/trubla-02.jpg",
+      posterRatio: 1.813,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/trubla-01.jpg",
+        "assets/img/stills/trubla-03.jpg",
+        "assets/img/stills/trubla-04.jpg",
+        "assets/img/stills/trubla-05.jpg",
+        "assets/img/stills/trubla-06.jpg",
+        "assets/img/stills/trubla-07.jpg"
+      ],
+      video:  { provider: "vimeo", id: "1197439509" },
+      notes:  {
+        ar: "إخراج بيشوي كمال · تصوير فيلوباتير مراد. ديكورات مبنية بالكامل.",
+        en: "Directed by Bishoy Kamal, shot by Filopater Murad. Fully built sets."
+      }
+    },
+
+    {
       id: "marijuana",
       published: true,
       stage: "produced",
@@ -197,32 +228,6 @@ const SITE = {
         ar: "إخراج محمد عجمي · مدير تصوير هاشم حاميكس · مونتاج وتصحيح ألوان ItsNoureldin.",
         en: "Directed by Mohamed Agamy · DOP Hashem Hamix · Edit and colour by ItsNoureldin."
       }
-    },
-
-    {
-      id: "liveshow",
-      published: true,
-      stage: "produced",
-      title:  { ar: "Live Show", en: "Live Show" },
-      format: { ar: "فيلم قصير", en: "Short film" },
-      genre:  { ar: "دراما", en: "Drama" },
-      year:   "2023",   // ⚠️ مقدّرة من تاريخ رفع الصور — صحّحها لو غلط
-      role:   { ar: "مدير إنتاج", en: "Production Manager" },
-      status: null,
-      logline:{
-        ar: "فيلم قصير — تصوير في الإسكندرية.",
-        en: "A short film — shot in Alexandria."
-      },
-      poster: "assets/img/stills/liveshow-02.jpg",
-      posterRatio: 1.44,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
-      stills: [
-        "assets/img/stills/liveshow-01.jpg",
-        "assets/img/stills/liveshow-03.jpg",
-        "assets/img/stills/liveshow-04.jpg",
-        "assets/img/stills/liveshow-05.jpg"
-      ],
-      video:  null,
-      notes:  null
     },
 
     {
@@ -261,64 +266,58 @@ const SITE = {
     },
 
     {
-      id: "moussa",
+      id: "raya",
       published: true,
       stage: "produced",
-      title:  { ar: "آخر أيامك يا موسى", en: "Akher Ayamak Ya Moussa" },
-      format: { ar: "فيلم قصير", en: "Short film" },
-      genre:  { ar: "دراما", en: "Drama" },
-      year:   "2024",
+      title:  { ar: "Raya Auto Premium", en: "Raya Auto Premium" },
+      format: { ar: "إعلان تليفزيوني", en: "TVC" },
+      genre:  { ar: "إعلان", en: "Commercial" },
+      year:   "2023",
       role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "إنتاج مستقل", en: "Independent" },
+      status: { ar: "Raya Auto Premium", en: "Raya Auto Premium" },
       logline:{
-        ar: "فيلم قصير من إنتاجي — تصوير في الريف المصري.",
-        en: "An independent short film I produced, shot in the Egyptian countryside."
+        ar: "إعلان «Golf Car-ried» لراية أوتو بريميم — تصوير على الساحل.",
+        en: "The Golf Car-ried TVC for Raya Auto Premium — shot on the coast."
       },
-      poster: "assets/img/stills/moussa-04.jpg",
-      posterRatio: 1.333,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      poster: "assets/img/stills/raya-01.jpg",
+      posterRatio: 1.783,
       stills: [
-        "assets/img/stills/moussa-01.jpg",
-        "assets/img/stills/moussa-02.jpg",
-        "assets/img/stills/moussa-03.jpg",
-        "assets/img/stills/moussa-05.jpg",
-        "assets/img/stills/moussa-06.jpg"
+        "assets/img/stills/raya-02.jpg",
+        "assets/img/stills/raya-03.jpg",
+        "assets/img/stills/raya-04.jpg",
+        "assets/img/stills/raya-05.jpg"
       ],
       video:  null,
       notes:  {
-        ar: "إخراج آدم علاء · إنتاج محمد عجمي. تصوير في مواقع خارجية.",
-        en: "Directed by Adam Alaa · Produced by Mohamed Agamy. Shot on location."
+        ar: "إخراج محمد عبدالعزيز سليمان · شركة إنتاج Rivolta · تصوير فيلوباتير مراد.",
+        en: "Directed by Mohamed Abdelaziz Soliman · Production house Rivolta · DOP Filopater Morad."
       }
     },
 
     {
-      id: "trubla",
+      id: "liveshow",
       published: true,
       stage: "produced",
-      title:  { ar: "Trubla", en: "Trubla" },
-      format: { ar: "إعلان إطلاق تطبيق", en: "App launch commercial" },
-      genre:  { ar: "إعلان", en: "Commercial" },
-      year:   "2025",
-      role:   { ar: "إنتاج", en: "Producer" },
-      status: { ar: "Trubla", en: "Trubla" },
+      title:  { ar: "Live Show", en: "Live Show" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2023",   // ⚠️ مقدّرة من تاريخ رفع الصور — صحّحها لو غلط
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
+      status: null,
       logline:{
-        ar: "إعلان إطلاق بمشاهد وديكورات متعددة — من سطح القمر لشارع ليلي بالنيون.",
-        en: "A launch film across multiple built sets — from a lunar surface to a neon-lit street."
+        ar: "فيلم قصير — تصوير في الإسكندرية.",
+        en: "A short film — shot in Alexandria."
       },
-      poster: "assets/img/stills/trubla-02.jpg",
-      posterRatio: 1.813,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      poster: "assets/img/stills/liveshow-02.jpg",
+      posterRatio: 1.44,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
       stills: [
-        "assets/img/stills/trubla-01.jpg",
-        "assets/img/stills/trubla-03.jpg",
-        "assets/img/stills/trubla-04.jpg",
-        "assets/img/stills/trubla-05.jpg",
-        "assets/img/stills/trubla-06.jpg",
-        "assets/img/stills/trubla-07.jpg"
+        "assets/img/stills/liveshow-01.jpg",
+        "assets/img/stills/liveshow-03.jpg",
+        "assets/img/stills/liveshow-04.jpg",
+        "assets/img/stills/liveshow-05.jpg"
       ],
-      video:  { provider: "vimeo", id: "1197439509" },
-      notes:  {
-        ar: "إخراج بيشوي كمال · تصوير فيلوباتير مراد. ديكورات مبنية بالكامل.",
-        en: "Directed by Bishoy Kamal, shot by Filopater Murad. Fully built sets."
-      }
+      video:  null,
+      notes:  null
     },
 
     {
@@ -350,6 +349,36 @@ const SITE = {
       notes:  {
         ar: "تصوير ليلي في مواقع مفتوحة على البحر.",
         en: "Night shoot on open coastal locations."
+      }
+    },
+
+    {
+      id: "moussa",
+      published: true,
+      stage: "produced",
+      title:  { ar: "آخر أيامك يا موسى", en: "Akher Ayamak Ya Moussa" },
+      format: { ar: "فيلم قصير", en: "Short film" },
+      genre:  { ar: "دراما", en: "Drama" },
+      year:   "2024",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "إنتاج مستقل", en: "Independent" },
+      logline:{
+        ar: "فيلم قصير من إنتاجي — تصوير في الريف المصري.",
+        en: "An independent short film I produced, shot in the Egyptian countryside."
+      },
+      poster: "assets/img/stills/moussa-04.jpg",
+      posterRatio: 1.333,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/moussa-01.jpg",
+        "assets/img/stills/moussa-02.jpg",
+        "assets/img/stills/moussa-03.jpg",
+        "assets/img/stills/moussa-05.jpg",
+        "assets/img/stills/moussa-06.jpg"
+      ],
+      video:  null,
+      notes:  {
+        ar: "إخراج آدم علاء · إنتاج محمد عجمي. تصوير في مواقع خارجية.",
+        en: "Directed by Adam Alaa · Produced by Mohamed Agamy. Shot on location."
       }
     },
 
@@ -410,6 +439,35 @@ const SITE = {
     },
 
     {
+      id: "bebo",
+      published: true,
+      stage: "produced",
+      title:  { ar: "بيبو — بنحب نغيب", en: "Bebo — Bn7b N8eeb" },
+      format: { ar: "فيديو كليب · ٢:٥٢", en: "Music video · 2:52" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2023",
+      role:   { ar: "إخراج", en: "Director" },
+      status: { ar: "بيبو", en: "Bebo" },
+      logline:{
+        ar: "فيديو كليب «بنحب نغيب» لبيبو — إخراجي، تصوير على ساحل الإسكندرية.",
+        en: "Music video for Bn7b N8eeb by Bebo — directed by me, shot on the Alexandria coast."
+      },
+      poster: "assets/img/stills/bebo-01.jpg",
+      posterRatio: 1.783,
+      stills: [
+        "assets/img/stills/bebo-02.jpg",
+        "assets/img/stills/bebo-03.jpg",
+        "assets/img/stills/bebo-04.jpg",
+        "assets/img/stills/bebo-05.jpg"
+      ],
+      video:  { provider: "vimeo", id: "854573021" },
+      notes:  {
+        ar: "إخراج محمد عجمي · تصوير فيلوباتير مراد · إنتاج عمروش بدر.",
+        en: "Directed by Mohamed Agamy · DOP Filopatre Morad · Produced by Amrosh Badr."
+      }
+    },
+
+    {
       id: "makka",
       published: true,
       stage: "produced",
@@ -440,6 +498,40 @@ const SITE = {
     },
 
     {
+      id: "wa7dani",
+      published: true,
+      stage: "produced",
+      title:  { ar: "وحداني", en: "Wa7dani" },
+      format: { ar: "فيديو كليب · ٢:١٥", en: "Music video · 2:15" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2022",
+      role:   { ar: "إخراج", en: "Director" },
+      status: { ar: "إخراج", en: "Directed" },
+      logline:{
+        ar: "فيديو كليب «وحداني» — إخراجي، تصوير ليلي في الإسكندرية.",
+        en: "Music video for Wa7dani — directed by me, a night shoot in Alexandria."
+      },
+      poster: "assets/img/stills/wa7dani-01.jpg",
+      posterRatio: 2.377,
+      stills: [
+        "assets/img/stills/wa7dani-02.jpg",
+        "assets/img/stills/wa7dani-03.jpg",
+        "assets/img/stills/wa7dani-04.jpg",
+        "assets/img/stills/wa7dani-05.jpg",
+        "assets/img/stills/wa7dani-06.jpg",
+        "assets/img/stills/wa7dani-07.jpg",
+        "assets/img/stills/wa7dani-08.jpg",
+        "assets/img/stills/wa7dani-09.jpg",
+        "assets/img/stills/wa7dani-10.jpg"
+      ],
+      video:  { provider: "vimeo", id: "701768449" },
+      notes:  {
+        ar: "إخراج محمد عجمي · مدير تصوير أيمن محمود.",
+        en: "Directed by Mohamed Agamy · DOP Ayman Mahmoud."
+      }
+    },
+
+    {
       id: "assaf",
       published: true,
       stage: "produced",
@@ -464,6 +556,41 @@ const SITE = {
       notes:  {
         ar: "حملة ستيلز — من غير فيديو.",
         en: "A stills campaign — no film."
+      }
+    },
+
+    {
+      id: "g3zt",
+      published: true,
+      stage: "produced",
+      title:  { ar: "عجزت", en: "3gzt" },
+      format: { ar: "فيديو كليب · ١:٥٧", en: "Music video · 1:57" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2021",
+      role:   { ar: "إخراج", en: "Director" },
+      status: { ar: "اتصوّر بموبايل", en: "Shot on iPhone" },
+      statusLabel: { ar: "ملاحظة", en: "Note" },
+      logline:{
+        ar: "فيديو كليب «عجزت» — إخراجي، اتصوّر بالكامل بموبايل في شوارع الإسكندرية.",
+        en: "Music video for 3gzt — directed by me, shot entirely on an iPhone in the streets of Alexandria."
+      },
+      poster: "assets/img/stills/g3zt-01.jpg",
+      posterRatio: 2.345,
+      stills: [
+        "assets/img/stills/g3zt-02.jpg",
+        "assets/img/stills/g3zt-03.jpg",
+        "assets/img/stills/g3zt-04.jpg",
+        "assets/img/stills/g3zt-05.jpg",
+        "assets/img/stills/g3zt-06.jpg",
+        "assets/img/stills/g3zt-07.jpg",
+        "assets/img/stills/g3zt-08.jpg",
+        "assets/img/stills/g3zt-09.jpg",
+        "assets/img/stills/g3zt-10.jpg"
+      ],
+      video:  { provider: "vimeo", id: "552287142" },
+      notes:  {
+        ar: "إخراج محمد عجمي · تصوير ومونتاج وتصحيح ألوان دانيال عاطف عزيز.",
+        en: "Directed by Mohamed Agamy · DOP, edit and colour by Daniel Atef Aziz."
       }
     },
 
