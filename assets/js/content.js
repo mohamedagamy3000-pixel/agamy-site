@@ -177,11 +177,11 @@ const SITE = {
         ar: "فيديو كليب لأغنية «ماريجوانا» لفريق هجين — إخراجي.",
         en: "Music video for \"Marijuana\" by the band Hageen — directed by me."
       },
-      poster: "assets/img/stills/marijuana-01.jpg",
+      poster: "assets/img/stills/marijuana-04.jpg",
       stills: [
+        "assets/img/stills/marijuana-01.jpg",
         "assets/img/stills/marijuana-02.jpg",
         "assets/img/stills/marijuana-03.jpg",
-        "assets/img/stills/marijuana-04.jpg",
         "assets/img/stills/marijuana-05.jpg",
         "assets/img/stills/marijuana-06.jpg",
         "assets/img/stills/marijuana-07.jpg",
@@ -211,9 +211,9 @@ const SITE = {
         ar: "فيلم قصير — تصوير في الإسكندرية.",
         en: "A short film — shot in Alexandria."
       },
-      poster: "assets/img/stills/liveshow-01.jpg",
+      poster: "assets/img/stills/liveshow-02.jpg",
       stills: [
-        "assets/img/stills/liveshow-02.jpg",
+        "assets/img/stills/liveshow-01.jpg",
         "assets/img/stills/liveshow-03.jpg",
         "assets/img/stills/liveshow-04.jpg",
         "assets/img/stills/liveshow-05.jpg"
