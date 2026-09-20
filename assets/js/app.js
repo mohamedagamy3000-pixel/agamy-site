@@ -193,7 +193,7 @@
               "<li>" + esc(w.year || "") + "</li>" +
             "</ul>" +
             '<p class="work-line">' + bi(w.logline) + "</p>" +
-            '<span class="status">' + bi(w.status) + "</span>" +
+            (w.status ? '<span class="status">' + bi(w.status) + "</span>" : "") +
           "</div>" +
         "</a>";
     }).join("");
@@ -306,7 +306,7 @@
           "<div><dt>" + bi(TXT.role) + "</dt><dd>" + bi(w.role) + "</dd></div>" +
           "<div><dt>" + bi(TXT.format) + "</dt><dd>" + bi(w.format) + "</dd></div>" +
           "<div><dt>" + bi(TXT.genre) + "</dt><dd>" + bi(w.genre) + "</dd></div>" +
-          "<div><dt>" + bi(w.statusLabel || TXT.clientL) + "</dt><dd>" + bi(w.status) + "</dd></div>" +
+          (w.status ? "<div><dt>" + bi(w.statusLabel || TXT.clientL) + "</dt><dd>" + bi(w.status) + "</dd></div>" : "") +
           "<div><dt>" + bi(TXT.yearL) + "</dt><dd>" + esc(w.year || "") + "</dd></div>" +
         "</dl>" +
         (w.notes ? '<div class="notes" style="margin-top:2.5rem"><p>' + bi(w.notes) + "</p></div>" : "") +

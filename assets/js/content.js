@@ -187,17 +187,15 @@ const SITE = {
     },
 
     {
-      // ⚠️ لسه مش ظاهر: محتاج أعرف دورك في الفيلم ده بالظبط.
-      //    قولّي الكريدت وأنا أكتبه وأخلّي published: true
       id: "liveshow",
-      published: false,
+      published: true,
       stage: "produced",
       title:  { ar: "Live Show", en: "Live Show" },
       format: { ar: "فيلم قصير", en: "Short film" },
       genre:  { ar: "دراما", en: "Drama" },
-      year:   "2023",
-      role:   { ar: "؟", en: "?" },
-      status: { ar: "؟", en: "?" },
+      year:   "2023",   // ⚠️ مقدّرة من تاريخ رفع الصور — صحّحها لو غلط
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
+      status: null,
       logline:{
         ar: "فيلم قصير — تصوير في الإسكندرية.",
         en: "A short film — shot in Alexandria."
