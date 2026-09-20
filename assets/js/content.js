@@ -178,7 +178,18 @@ const SITE = {
         en: "Music video for \"Marijuana\" by the band Hageen — directed by me."
       },
       poster: "assets/img/stills/marijuana-01.jpg",
-      stills: [],
+      stills: [
+        "assets/img/stills/marijuana-02.jpg",
+        "assets/img/stills/marijuana-03.jpg",
+        "assets/img/stills/marijuana-04.jpg",
+        "assets/img/stills/marijuana-05.jpg",
+        "assets/img/stills/marijuana-06.jpg",
+        "assets/img/stills/marijuana-07.jpg",
+        "assets/img/stills/marijuana-08.jpg",
+        "assets/img/stills/marijuana-09.jpg",
+        "assets/img/stills/marijuana-10.jpg",
+        "assets/img/stills/marijuana-11.jpg"
+      ],
       video:  { provider: "vimeo", id: "533574568" },
       notes:  {
         ar: "إخراج محمد عجمي · مدير تصوير هاشم حاميكس · مونتاج وتصحيح ألوان ItsNoureldin.",
