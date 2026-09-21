@@ -516,7 +516,7 @@ const SITE = {
       format: { ar: "حملة عطور", en: "Perfume campaign" },
       genre:  { ar: "إعلان", en: "Commercial" },
       year:   "2025",
-      role:   { ar: "إنتاج", en: "Producer" },
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
       status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
       logline:{
         ar: "حملة عطر نسائي لبراند سعودي — اتصوّرت في مصر.",
@@ -610,7 +610,7 @@ const SITE = {
       format: { ar: "حملة عطور", en: "Fragrance campaign" },
       genre:  { ar: "إعلان", en: "Commercial" },
       year:   "2025",
-      role:   { ar: "إنتاج", en: "Producer" },
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
       status: { ar: "Atlantis Homme — السعودية", en: "Atlantis Homme — KSA" },
       logline:{
         ar: "حملة عطر رجالي — تصوير على البحر في مصر.",
@@ -672,7 +672,7 @@ const SITE = {
       format: { ar: "فيلم حملة", en: "Campaign film" },
       genre:  { ar: "إعلان", en: "Commercial" },
       year:   "2024",
-      role:   { ar: "إنتاج", en: "Producer" },
+      role:   { ar: "مدير إنتاج", en: "Production Manager" },
       status: { ar: "Laverne Group — السعودية", en: "Laverne Group — KSA" },
       logline:{
         ar: "حملة عطور في حديقة — تصوير نهاري في مصر.",
