@@ -67,6 +67,42 @@ const SITE = {
      statusLabel → تسمية خانة status في صفحة المشروع (الافتراضي «العميل»). */
   works: [
     {
+      id: "agapios",
+      published: true,
+      stage: "produced",
+      category: "music",
+      title:  { ar: "AGapios — Pou To Pas", en: "AGapios — Pou To Pas" },
+      format: { ar: "فيديو كليب · ٣:٣٤", en: "Music video · 3:34" },
+      genre:  { ar: "موسيقى", en: "Music" },
+      year:   "2026",
+      role:   { ar: "إنتاج", en: "Producer" },
+      status: { ar: "AGapios", en: "AGapios" },
+      logline:{
+        ar: "فيديو كليب لأغنية «Pou To Pas» للمطرب اليوناني AGapios — اتصور في الإسكندرية.",
+        en: "Music video for AGapios's \"Pou To Pas\" — shot on location in Alexandria."
+      },
+      poster: "assets/img/stills/agapios-poster.jpg",
+      posterRatio: 1.344,   // نسبة الصورة الحقيقية — الكارت بياخدها عشان مايتقصّش
+      stills: [
+        "assets/img/stills/agapios-01.jpg",
+        "assets/img/stills/agapios-02.jpg",
+        "assets/img/stills/agapios-03.jpg",
+        "assets/img/stills/agapios-04.jpg",
+        "assets/img/stills/agapios-05.jpg",
+        "assets/img/stills/agapios-06.jpg",
+        "assets/img/stills/agapios-07.jpg",
+        "assets/img/stills/agapios-08.jpg",
+        "assets/img/stills/agapios-09.jpg",
+        "assets/img/stills/agapios-10.jpg"
+      ],
+      video:  { provider: "youtube", id: "Bo9rEPOb-Vs" },
+      notes:  {
+        ar: "إخراج جورج بنيوداكيس · تصوير فيلوباتير مراد · مدير إنتاج ستيفن خليل.",
+        en: "Directed by George Mpenioudakis · DOP Filopater Mourad · Production Manager Stephen Khalil."
+      }
+    },
+
+    {
       id: "madonna",
       published: true,
       stage: "produced",
