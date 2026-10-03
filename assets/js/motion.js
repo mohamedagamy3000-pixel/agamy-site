@@ -107,12 +107,73 @@
     });
   }
 
+  /* ---------- 5) روابط الهيدر بتسكرول بنفس نعومة الموقع ---------- */
+  function initNavScroll() {
+    if (reduce || !window.__lenis) return;
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest('a[href^="#"]');
+      if (!a) return;
+      var id = a.getAttribute("href").slice(1);
+      if (!id) return;
+      if (id === "top" && !document.getElementById("top")) {
+        e.preventDefault();
+        window.__lenis.scrollTo(0, { duration: 1.1 });
+        return;
+      }
+      var target = document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      window.__lenis.scrollTo(target, { offset: -80, duration: 1.1 });
+    });
+  }
+
+  /* ---------- 6) ظهور كروت الخدمات واحد ورا التاني ---------- */
+  function initServiceStagger() {
+    if (reduce || !hasGsap || !hasST) return;
+    var items = document.querySelectorAll(".service");
+    if (!items.length) return;
+
+    window.gsap.set(items, { opacity: 0, y: 20 });
+    window.gsap.to(items, {
+      opacity: 1,
+      y: 0,
+      duration: 0.5,
+      ease: "power2.out",
+      stagger: 0.08,
+      scrollTrigger: { trigger: items[0].closest(".services") || items[0], start: "top 85%" }
+    });
+  }
+
+  /* ---------- 7) ميل خفيف لكروت الأعمال مع حركة الماوس ---------- */
+  function initCardTilt() {
+    if (reduce || !hasGsap) return;
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+    document.querySelectorAll(".work-card").forEach(function (card) {
+      window.gsap.set(card, { transformPerspective: 800, transformStyle: "preserve-3d" });
+      var rotX = window.gsap.quickTo(card, "rotateX", { duration: 0.4, ease: "power2.out" });
+      var rotY = window.gsap.quickTo(card, "rotateY", { duration: 0.4, ease: "power2.out" });
+
+      card.addEventListener("mousemove", function (e) {
+        var r = card.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width - 0.5;
+        var py = (e.clientY - r.top) / r.height - 0.5;
+        rotX(py * -6);
+        rotY(px * 6);
+      });
+      card.addEventListener("mouseleave", function () { rotX(0); rotY(0); });
+    });
+  }
+
   function boot() {
     if (hasGsap && hasST) window.gsap.registerPlugin(window.ScrollTrigger);
     initSmoothScroll();
     initHeroIntro();
     initHeroParallax();
     initCounters();
+    initNavScroll();
+    initServiceStagger();
+    initCardTilt();
 
     // ارتفاع الصفحة بيتغيّر لما الصور تخلص تحميل — نظبط مواقع التريجر تاني
     if (hasST) window.addEventListener("load", function () { window.ScrollTrigger.refresh(); });
