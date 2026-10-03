@@ -518,7 +518,7 @@
 
     host.innerHTML = galleryItems.map(function (g, i) {
       var cap = g.caption ? '<figcaption>' + bi(g.caption) + "</figcaption>" : "";
-      return '<figure class="frame" data-frame="' + i + '" tabindex="0" role="button">' +
+      return '<figure class="frame reveal" data-frame="' + i + '" tabindex="0" role="button">' +
                '<img data-guard src="' + esc(g.src) + '" alt="' + esc(g.caption ? t(g.caption) : "") + '" loading="lazy">' +
                cap +
              "</figure>";
@@ -526,6 +526,7 @@
 
     guardImages(host);
     refreshFallbacks(host);
+    initReveal(host);
 
     host.addEventListener("click", function (e) {
       var f = e.target.closest("[data-frame]");
